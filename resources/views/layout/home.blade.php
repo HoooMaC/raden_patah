@@ -149,6 +149,7 @@
 @include('layout.fasilitas')
 
 {{-- Fasilitas End --}}
+@include('layout.artikel')
 
 
 @endsection
