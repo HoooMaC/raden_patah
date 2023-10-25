@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\pengumuman1;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class user_controller extends Controller
 {
