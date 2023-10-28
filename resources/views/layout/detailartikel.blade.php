@@ -111,9 +111,8 @@
             </div>
             <!-- Side widget-->
             <div class="card mb-4">
-                <div class="card-header">Side Widget</div>
-                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use,
-                    and feature the Bootstrap 5 card component!</div>
+                <div class="card-header">Pemberitahuan</div>
+                <div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur similique excepturi sed, vitae assumenda quisquam facilis iste accusamus inventore maxime recusandae, quae, iure magnam!</div>
             </div>
         </div>
     </div>
