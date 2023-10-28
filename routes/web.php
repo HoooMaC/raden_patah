@@ -16,6 +16,7 @@ use App\Http\Controllers\login_Controller;
 use App\Http\Controllers\ramadhan_Controller;
 use App\Http\Controllers\syiar_Controller;
 use App\Http\Controllers\pengumuman_Controller;
+use App\Http\Controllers\ArtikelController;
 
 
 
@@ -138,6 +139,10 @@ Route::get('/pengumuman', [pengumuman_Controller::class, 'index']);
 Route::post('/pengumuman', [pengumuman_Controller::class, 'store']); // Menggunakan metode POST untuk menyimpan data
 Route::put('/pengumuman/update/{id_pengumuman}', [pengumuman_Controller::class, 'update']);
 Route::post('/pengumuman/delete/{id_pengumuman}', [pengumuman_Controller::class, 'destroy']);
+
+
+// ARTIKEL
+Route::resource('artikel', ArtikelController::class);
 
 
 

@@ -20,7 +20,24 @@
                                     repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum
                                     in
                                     pariatur. Incidunt repellendus praesentium quae!</p>
-                                <a href="" class="text-primary btn-sm">Baca Selengkapnya</a>
+                                <a href="{{route('artikel.show',1)}}" class="text-primary btn-sm">Baca Selengkapnya</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Sunset</h5>
+                                <p class="card-text text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit. Ut eum
+                                    similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore
+                                    modi dolorum
+                                    in
+                                    pariatur. Incidunt repellendus praesentium quae!</p>
+                                <a href="{{route('artikel.show',1)}}" class="text-primary btn-sm">Baca Selengkapnya</a>
 
                             </div>
                         </div>
@@ -54,7 +71,7 @@
                                     modi dolorum
                                     in
                                     pariatur. Incidunt repellendus praesentium quae!</p>
-                                <a href="" class="text-primary btn-sm">Baca Selengkapnya</a>
+                                <a href="{{route('artikel.show',1)}}" class="text-primary btn-sm">Baca Selengkapnya</a>
 
                             </div>
                         </div>
@@ -71,24 +88,7 @@
                                     modi dolorum
                                     in
                                     pariatur. Incidunt repellendus praesentium quae!</p>
-                                <a href="" class="text-primary btn-sm">Baca Selengkapnya</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-5">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-                                alt="" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Sunset</h5>
-                                <p class="card-text text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing
-                                    elit. Ut eum
-                                    similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore
-                                    modi dolorum
-                                    in
-                                    pariatur. Incidunt repellendus praesentium quae!</p>
-                                <a href="" class="text-primary btn-sm">Baca Selengkapnya</a>
+                                <a href="{{route('artikel.show',1)}}" class="text-primary btn-sm">Baca Selengkapnya</a>
 
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                     repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum
                                     in
                                     pariatur. Incidunt repellendus praesentium quae!</p>
-                                <a href="" class="text-primary btn-sm">Baca Selengkapnya</a>
+                                <a href="{{route('artikel.show',1)}}" class="text-primary btn-sm">Baca Selengkapnya</a>
 
                             </div>
                         </div>
