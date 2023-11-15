@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class mualafcenter_Controller extends Controller
 {
@@ -37,12 +37,12 @@ class mualafcenter_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
+    $request->validate([
         'nama' => 'required|max:255',
-        'alamat' => 'required|max:255', 
+        'alamat' => 'required|max:255',
         'telpon' => 'required',
         'email' => 'required',
-       
+
 
     ]);
 
@@ -51,7 +51,7 @@ class mualafcenter_Controller extends Controller
         'alamat' => $request->input('alamat'),
         'telpon' => $request->input('no telpon'),
         'email' => $request->input('email'),
-       
+
     ];
 
     DB::table('mualafcenter')->insert($data);
@@ -91,20 +91,20 @@ class mualafcenter_Controller extends Controller
      */
     public function update(Request $request, $id_mualaf_center)
     {
-        $request->validate([ 
+        $request->validate([
             'nama' => 'required|max:255',
-            'alamat' => 'required|max:255', 
+            'alamat' => 'required|max:255',
             'telpon' => 'required',
             'email' => 'required',
-            
+
         ]);
-    
+
         $data = [
             'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),
             'telpon' => $request->input('telpon'),
             'email' => $request->input('email'),
-            
+
         ];
 
         DB::table('mualafcenter')

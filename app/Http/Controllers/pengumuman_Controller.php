@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\pengumuman1;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class pengumuman_Controller extends Controller
 {
@@ -38,8 +38,8 @@ class pengumuman_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
-        'nama_kegiatan' => 'required|max:255', 
+    $request->validate([
+        'nama_kegiatan' => 'required|max:255',
         'judul' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
         'pemateri' => 'required',
         'pelaksanaan' => 'required',
@@ -91,8 +91,8 @@ class pengumuman_Controller extends Controller
      */
     public function update(Request $request, $id_pengumuman)
     {
-        $request->validate([ 
-            'nama_kegiatan' => 'required|max:255', 
+        $request->validate([
+            'nama_kegiatan' => 'required|max:255',
             'judul' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
             'pemateri' => 'required',
             'pelaksanaan' => 'required',

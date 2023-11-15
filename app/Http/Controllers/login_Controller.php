@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 
 
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class login_Controller extends Controller
 {
@@ -30,7 +30,7 @@ class login_Controller extends Controller
         Session::flash('email', $request->email);
         $request->validate([
             'email'=> 'required',
-            'password'=> 'required'        
+            'password'=> 'required'
 
         ],[
             'email.required'=>'Email wajib diisi',
@@ -46,7 +46,7 @@ class login_Controller extends Controller
             return redirect('/Dataprogramharian')->with('success', Auth::user()->name . 'Berhasil login');
         }else{
             return redirect('signin')->withErrors('Username dan password yang dimasukkan tidak valid');
-        }        
+        }
     }
 
 
@@ -65,13 +65,13 @@ class login_Controller extends Controller
 
 
          public function create(Request $request)
-         {  
+         {
             Session::flash('name', $request->name);
             Session::flash('email', $request->email);
             $request->validate([
                 'name'=> 'required',
                 'email'=> 'required|email|unique:users',
-                'password'=> 'required|min:6'        
+                'password'=> 'required|min:6'
 
             ],[
                 'name.required'=> 'Nama wajib diisi',
@@ -98,8 +98,8 @@ class login_Controller extends Controller
             return redirect('/Dataprogramharian')->with('success', Auth::user()->name . 'Berhasil login');
         }else{
             return redirect('signin')->withErrors('Username dan password yang dimasukkan tidak valid');
-        }     
+        }
          }
-       
-    
+
+
 }

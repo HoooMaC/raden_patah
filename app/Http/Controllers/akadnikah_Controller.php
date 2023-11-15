@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class akadnikah_Controller extends Controller
 {
@@ -37,9 +37,9 @@ class akadnikah_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
+    $request->validate([
         'nama' => 'required|max:255',
-        'alamat' => 'required|max:255', 
+        'alamat' => 'required|max:255',
         'telpon' => 'required',
         'email' => 'required',
 
@@ -89,13 +89,13 @@ class akadnikah_Controller extends Controller
      */
     public function update(Request $request, $id_akad_nikah)
     {
-        $request->validate([ 
+        $request->validate([
             'nama' => 'required|max:255',
-            'alamat' => 'required|max:255', 
+            'alamat' => 'required|max:255',
             'telpon' => 'required',
             'email' => 'required',
         ]);
-    
+
         $data = [
             'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),

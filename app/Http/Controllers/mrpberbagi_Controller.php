@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class mrpberbagi_Controller extends Controller
 {
@@ -37,8 +37,8 @@ class mrpberbagi_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
-        'nama_kegiatan' => 'required|max:255', 
+    $request->validate([
+        'nama_kegiatan' => 'required|max:255',
         'keterangan' => 'required',
         'gambar' => 'required|image',
     ]);
@@ -89,7 +89,7 @@ class mrpberbagi_Controller extends Controller
      */
     public function update(Request $request, $id_mrp_berbagi)
     {
-        $request->validate([ 
+        $request->validate([
             'nama_kegiatan' => 'required|max:255',
             'keterangan' => 'required',
             'gambar' => 'required|image',
@@ -97,7 +97,7 @@ class mrpberbagi_Controller extends Controller
 
         $filename = $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->move(public_path('foto_mrpberbagi'), $filename);
-    
+
         $data = [
             'nama_kegiatan' => $request->input('nama_kegiatan'),
             'keterangan' => $request->input('keterangan'),

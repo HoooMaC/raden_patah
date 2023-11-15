@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class programmingguan_Controller extends Controller
 {
@@ -37,8 +37,8 @@ class programmingguan_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
-        'nama_program' => 'required|max:255', 
+    $request->validate([
+        'nama_program' => 'required|max:255',
         'pelaksanaan' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
         'jumlah_hadir' => 'required',
         'keterangan' => 'required',
@@ -93,7 +93,7 @@ class programmingguan_Controller extends Controller
      */
     public function update(Request $request, $id_program_mingguan)
     {
-        $request->validate([ 
+        $request->validate([
             'nama_program' => 'required|max:255',
             'pelaksanaan' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
             'jumlah_hadir' => 'required',
@@ -102,9 +102,9 @@ class programmingguan_Controller extends Controller
         ]);
 
 
-        // cek apakah ada gambar baru yang dikirimkan 
+        // cek apakah ada gambar baru yang dikirimkan
         if ($request->hasFile('gambar')) {
-        // simpan gambar baru dengan nama yang unik 
+        // simpan gambar baru dengan nama yang unik
            $filename = $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->move(public_path('foto_programmingguan'), $filename);
         }
@@ -113,7 +113,7 @@ class programmingguan_Controller extends Controller
 
    //     $filename = $request->file('gambar')->getClientOriginalName();
    //     $request->file('gambar')->move(public_path('foto_programmingguan'), $filename);
-    
+
         $data = [
             'nama_program' => $request->input('nama_program'),
             'pelaksanaan' => $request->input('pelaksanaan'),
@@ -122,7 +122,7 @@ class programmingguan_Controller extends Controller
             'gambar' => 'nullable|image',
         ];
 
-        // jika ada gambar baru, tambahkan ke data 
+        // jika ada gambar baru, tambahkan ke data
         if (isset($filename)) {
             $data['gambar'] = $filename;
         }

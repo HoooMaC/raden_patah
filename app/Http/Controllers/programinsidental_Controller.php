@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
+
 class programinsidental_Controller extends Controller
 {
     /**
@@ -36,8 +37,8 @@ class programinsidental_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([ 
-        'nama_kegiatan' => 'required|max:255', 
+    $request->validate([
+        'nama_kegiatan' => 'required|max:255',
         'keterangan' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
         'gambar' => 'required|image',
     ]);
@@ -88,7 +89,7 @@ class programinsidental_Controller extends Controller
      */
     public function update(Request $request, $id_program_insidental)
     {
-        $request->validate([ 
+        $request->validate([
             'nama_kegiatan' => 'required|max:255',
             'keterangan' => 'required|max:255', // Menambahkan aturan validasi untuk foto sebagai gambar
             'gambar' => 'required|image',
@@ -96,7 +97,7 @@ class programinsidental_Controller extends Controller
 
         $filename = $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->move(public_path('foto_programinsidental'), $filename);
-    
+
         $data = [
             'nama_kegiatan' => $request->input('nama_kegiatan'),
             'keterangan' => $request->input('keterangan'),

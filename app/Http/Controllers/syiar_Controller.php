@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 class syiar_Controller extends Controller
 {
     /**
@@ -36,7 +36,7 @@ class syiar_Controller extends Controller
      */
     public function store(Request $request)
 {
-    $request->validate([  
+    $request->validate([
         'gambar' => 'required|image',
     ]);
 
@@ -84,13 +84,13 @@ class syiar_Controller extends Controller
      */
     public function update(Request $request, $id_syiar)
     {
-        $request->validate([ 
+        $request->validate([
             'gambar' => 'required|image',
         ]);
 
         $filename = $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->move(public_path('foto_syiar'), $filename);
-    
+
         $data = [
             'gambar' => $filename,
         ];
