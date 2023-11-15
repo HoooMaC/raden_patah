@@ -53,7 +53,7 @@ Route::get('/pengumuman', [user_controller::class, 'pengumuman'])->name('pages.p
 Route::get('/akadnikah', [user_controller::class, 'akadnikah']);
 Route::post('/akadnikah', [user_Controller::class, 'addakadnikah']);
 
-Route::get('/konsultasikeagamaan', [user_controller::class, 'konsultasikeagamaan']); 
+Route::get('/konsultasikeagamaan', [user_controller::class, 'konsultasikeagamaan']);
 Route::post('/konsultasikeagamaan', [user_Controller::class, 'addkonsultasikeagamaan']);
 
 Route::get('/dashboard', [adminController::class, 'index']);
@@ -160,7 +160,6 @@ Route::post('/signin/login', [login_Controller::class, 'login']);
 Route::post('/signin/logout', [login_Controller::class, 'logout']);
 
 // LOGIN & LOGOUT END
-
 
 Route::get('/Dataprogramharian', [programharian_Controller::class, 'index']);
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Register MRP UB</title>
+    <title>Login MRP UB</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,20 +19,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Register Admin MRP UB</h2>
+                    <h2 class="heading-section">Login Admin MRP UB</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <form action="/signin/create" method="POST">
+                        <form action="/signin/login" method="POST">
                             @csrf
-
-                            <div class="form-group">
-                                <input type="name" value="{{ Session::get('name') }}" name="name"
-                                    class="form-control" placeholder="Name" required>
-                            </div>
-
                             <div class="form-group">
                                 <input type="email" value="{{ Session::get('email') }}" name="email"
                                     class="form-control" placeholder="Email" required>
@@ -46,11 +40,14 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit"
-                                    class="form-control btn btn-primary submit px-3">Register</button>
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="/register" class="form-control btn btn-primary submit px-3">Register</a>
                             </div>
                         </form>
-                        <h6 class="mb-4 text-center">Have an account?</h6>
+                        <h6 class="mb-4 text-center">- Or login with -</h6>
 
                     </div>
                 </div>
