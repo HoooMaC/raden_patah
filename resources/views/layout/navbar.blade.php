@@ -3,11 +3,6 @@
         <h2 class="m-0 text-primary"><i class=""></i>Masjid Raden Patah</h2>
     </a>
 
-    {{-- Ini Buat Apa ??? --}}
-    {{-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button> --}}
-
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav me-4 ms-auto p-4 p-lg-0 d-flex align-items-center">
             <a href="{{ url('/home') }}"
