@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
+                    <div class="position-relative h-100" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%"
                             src="{{ asset('logo_unit/Logo_Umar.png') }}" alt="logo umar" style="object-fit: cover;">
                     </div>
@@ -62,8 +62,8 @@
                     <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute" style="max-height: 100%"
+                    <div class="position-relative h-75" style="display:flex; align-items:center; justify-content:center;">
+                        <img class="img-fluid position-absolute" style="max-height: 100%;"
                             src="{{ asset('logo_unit/Logo_PTQ.png') }}" alt="logo ptq" style="object-fit: cover;">
                     </div>
                 </div>
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
+                    <div class="position-relative h-100" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%"
                             src="{{ asset('logo_unit/Logo_DC.png') }}" alt="logo digital creative"
                             style="object-fit: cover;">
@@ -126,7 +126,7 @@
                     {{-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> --}}
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
+                    <div class="position-relative h-100" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%"
                             src="{{ asset('logo_unit/Logo_IMC.png') }}" alt="logo imam muda center"
                             style="object-fit: cover;">
@@ -144,7 +144,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
+                    <div class="position-relative h-100" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%"
                             src="{{ asset('logo_unit/Logo_Lunch_Space.png') }}" alt="logo mrp lunch space"
                             style="object-fit: cover;">
