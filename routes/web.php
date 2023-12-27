@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user_controller;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\programharian_Controller;
-use App\Http\Controllers\programlainnya_Controller;
+use App\Http\Controllers\programlainnya_controller;
 use App\Http\Controllers\program_harian_Controller;
 use App\Http\Controllers\programmingguan_Controller;
 use App\Http\Controllers\programtriwulan_Controller;
