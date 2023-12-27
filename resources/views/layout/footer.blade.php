@@ -5,6 +5,11 @@
                 <h4 class="text-white mb-3">Quick Link</h4>
                 <a class="btn btn-link" href="/home">Profil</a>
                 <a class="btn btn-link" href="/program">Program</a>
+                    <ul>
+                        <li><a class="btn btn-link" href="/progharian">Program Harian</a></li>
+                        <li><a class="btn btn-link" href="/progmingguan">Program Mingguan</a></li>
+                        <li><a class="btn btn-link" href="/proglainnya">Program Lainnya</a></li>
+                    </ul>
                 <a class="btn btn-link" href="/event">Event</a>
                 <a class="btn btn-link" href="/unit">Unit</a>
                 <a class="btn btn-link" href="/layanan">Layanan</a>

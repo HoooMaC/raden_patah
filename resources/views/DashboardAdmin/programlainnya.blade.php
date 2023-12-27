@@ -27,10 +27,10 @@
                         <div class="panel-title">
                         <div class="row">
                          <div class="col-md-12">
-                          Data Program Mingguan
+                          Data Program Lainnya
                          </div>
                          <div class="col-md-12">
-                                    <button src="{{url('/Dataprogrammingguan')}}" style="float: right;margin-bottom:20px" data-toggle="modal" data-target="#myModal"
+                                    <button src="{{url('/Dataprogramlainnya')}}" style="float: right;margin-bottom:20px" data-toggle="modal" data-target="#myModal"
                                     class="btn btn-rounded btn-option2"><i class="bi bi-plus-lg"></i><span
                                         class="glyphicon glyphicon-plus"></span> Tambah Data</button>
                          </div>
@@ -55,7 +55,7 @@
                                     @php
                                     $no =1;
                                 @endphp
-                                @foreach ($programmingguan as $data)
+                                @foreach ($programlainnya as $data)
                                         <tr>
                                             <td class="dtr-cobtrol sorting_1" tabindex="0">{{$no++}}</td>
                                             <td  class="dtr-cobtrol sorting_1" tabindex="1">{{$data->nama_program}}</td>
@@ -63,18 +63,18 @@
                                             <td class="dtr-cobtrol sorting_1" tabindex="3">{{$data->jumlah_hadir}}</td>
                                             <td class="dtr-cobtrol sorting_1" tabindex="3">{{$data->keterangan}}</td>
                                             <td  class="dtr-cobtrol sorting_1" tabindex="4" >
-                                                <img src="{{asset('foto_programmingguan/'.$data->gambar)}}" style="width: 70px;"></td>
+                                                <img src="{{asset('foto_programlainnya/'.$data->gambar)}}" style="width: 70px;"></td>
                                             <td>
-                                                <button data-toggle="modal" data-target="#myModalEdit{{$data->id_program_mingguan}}"
+                                                <button data-toggle="modal" data-target="#myModalEdit{{$data->id_program_lainnya}}"
                                                         data-nama_program="{{ $data->nama_program}}" 
                                                         data-pelaksanaan="{{$data->pelaksanaan}}" 
                                                         data-jumlah_hadir="{{$data->jumlah_hadir}}"
-                                                        data-keterangan="{{$data->keterangan}}"
+                                                        data-jumlah_hadir="{{$data->keterangan}}"
                                                         data-gambar="{{$data->gambar}}"
                                                         class="btn btn-warning btn-m"><i class="fa fa-edit"></i>
                                                 </button>
                                             
-                                                <form action="/Dataprogrammingguan/{{$data->id_program_mingguan}}" method="post">
+                                                <form action="/Dataprogramlainnya/{{$data->id_program_lainnya}}" method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     
@@ -88,21 +88,21 @@
                                                 </form>
                                             </td>
                                             
-                                        <div id="myModalEdit{{$data->id_program_mingguan}}" class="modal fade"  tabindex="-1" role="dialog">
+                                        <div id="myModalEdit{{$data->id_program_lainnya}}" class="modal fade"  tabindex="-1" role="dialog">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">EDIT DATA Program Mingguan<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
+                                                        <h4 class="modal-title">EDIT DATA Program Lainnya<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
                                                     </div>
                                     
-                                                    <form method="post" enctype="multipart/form-data" action="/Dataprogrammingguan/update/{{$data->id_program_mingguan}}">
+                                                    <form method="post" enctype="multipart/form-data" action="/Dataprogramlainnya/update/{{$data->id_program_lainnya}}">
                                                         @csrf
                                                         @method('PUT')
                                                         <div class="modal-body">
-                                                            <input type="hidden" name="id" class="form-control" value="{{$data->id_program_mingguan}}"> 
+                                                            <input type="hidden" name="id" class="form-control" value="{{$data->id_program_lainnya}}"> 
                                                             <div class="form-group">
                                                                 <div class="row">
-                                                                    <input type="hidden" name="id_program_mingguan" class="form-control" value="{{$data->id_program_mingguan}}"> 
+                                                                    <input type="hidden" name="id_program_lainnya" class="form-control" value="{{$data->id_program_lainnya}}"> 
                                                                     <div class="form-group">
                                                                     <label>Nama Program</label>
                                                                     <input name="nama_program" type="text" class="form-control @error('nama_program') is-invalid @enderror"
@@ -135,7 +135,11 @@
                                                                     <label for="exampleInputFile">Gambar</label>
                                                                     <input type="file" name="gambar" class="form-control"
                                                                         id="exampleInputFile" >
-                                                                        <img src="{{asset('foto_programmingguan/' . $data->gambar)}}" width="70px" alt="image">
+                                                                    @if ($data->gambar)
+                                                                        <img src="{{ asset('foto_programlainnya/'.$data->gambar) }}" width="70px" alt="Gambar">
+                                                                    @endif
+
+                                                                        {{-- <img src="{{asset('foto_programlainnya/' . $data->gambar)}}" width="70px" alt="image"> --}}
                                                                 </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
@@ -146,14 +150,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="myModalDelete{{$data->id_program_mingguan}}" class="modal fade">
+                                        <div id="myModalDelete{{$data->id_program_lainnya}}" class="modal fade">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">HAPUS DATA PROGRAM MINGGUAN<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
+                                                        <h4 class="modal-title">HAPUS DATA PROGRAM LAINNYA<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
                                                     </div>
                                     
-                                                    <form method="post" enctype="multipart/form-data" action="/Dataprogrammingguan/delete/{{$data->id_program_mingguan}}">
+                                                    <form method="post" enctype="multipart/form-data" action="/Dataprogramlainnya/delete/{{$data->id_program_lainnya}}">
                                                         @csrf
                                                         @method('DELETE')
                                                         <div class="container-fluid">
@@ -183,16 +187,15 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title">TAMBAH DATA PROGRAM MINGGUAN<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
+                                                <h4 class="modal-title">TAMBAH DATA PROGRAM LAINNYA<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
                                             </div>
-                            
-                                            <form method="post" enctype="multipart/form-data" action="/Dataprogrammingguan">
+                                            <form method="post" enctype="multipart/form-data" action="/Dataprogramlainnya">
                                                 @csrf
-                                                @foreach ($programmingguan as $data)
+                                                @foreach ($programlainnya as $data)
                                                 <div class="modal-body">
                                                     <div class="form-group">
                                                         <div class="row">
-                                                            <input type="hidden" name="id_program_mingguan" class="form-control" value="{{$data->id_program_mingguan}}"> 
+                                                            <input type="hidden" name="id_program_lainnya" class="form-control" value="{{$data->id_program_lainnya}}"> 
                                                             <div class="form-group">
                                                             <label>Nama Program</label>
                                                             <input name="nama_program" type="text" class="form-control @error('nama_program') is-invalid @enderror"

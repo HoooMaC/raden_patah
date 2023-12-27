@@ -7,6 +7,7 @@
                       <ul>
                         <li><a href="/Dataprogramharian"><i class= ></i> Program Harian</a></li>
                         <li><a href="/Dataprogrammingguan"><i class=></i> Program Mingguan</a></li>
+                        <li><a href="/Dataprogramlainnya"><i class=></i> Program Lainnya</a></li>
                         <li><a href="/Dataprogramtriwulan"><i class=></i> Program Triwulan</a></li>
                         <li><a href="/Dataprograminsidental"><i class=></i> Program Insidental</a></li>
                       </ul>

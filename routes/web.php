@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user_controller;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\programharian_Controller;
+use App\Http\Controllers\programlainnya_Controller;
 use App\Http\Controllers\program_harian_Controller;
 use App\Http\Controllers\programmingguan_Controller;
 use App\Http\Controllers\programtriwulan_Controller;
@@ -32,12 +33,18 @@ use App\Http\Controllers\ArtikelController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
 Route::get('/home', [user_controller::class, 'home']);
 
 Route::get('/program', [user_controller::class, 'program']);
+
+Route::get('/progharian', [user_controller::class, 'progharian']);
+
+Route::get('/progmingguan', [user_controller::class, 'progmingguan']);
+
+Route::get('/proglainnya', [user_controller::class, 'proglainnya']);
 
 Route::get('/event', [user_controller::class, 'event']);
 
@@ -60,6 +67,8 @@ Route::get('/dashboard', [adminController::class, 'index']);
 
 Route::get('/programmingguan', [adminController::class, 'program_mingguan']);
 
+Route::get('/programlainnya', [adminController::class, 'program_lainnya']);
+
 Route::get('/programtriwulan', [adminController::class, 'program_triwulan']);
 
 Route::get('/programinsidental', [adminController::class, 'program_insidental']);
@@ -81,10 +90,16 @@ Route::get('/Dataprogramharian', [programharian_Controller::class, 'index']);
 Route::put('/Dataprogramharian/update/{id_program_harian}', [programharian_Controller::class, 'update']);
 Route::post('/Dataprogramharian/delete/{id_program_harian}', [programharian_Controller::class, 'destroy']);
 
+Route::resource('/Dataprogrammingguan', programmingguan_Controller::class);
 Route::get('/Dataprogrammingguan', [programmingguan_Controller::class, 'index']);
 Route::post('/Dataprogrammingguan', [programmingguan_Controller::class, 'store']); // Menggunakan metode POST untuk menyimpan data
 Route::put('/Dataprogrammingguan/update/{id_program_mingguan}', [programmingguan_Controller::class, 'update']);
 Route::post('/Dataprogrammingguan/delete/{id_program_mingguan}', [programmingguan_Controller::class, 'destroy']);
+
+Route::resource('/Dataprogramlainnya', programlainnya_Controller::class);
+Route::get('/Dataprogramlainnya', [programlainnya_Controller::class, 'index']);
+Route::put('/Dataprogramlainnya/update/{id_program_lainnya}', [programlainnya_Controller::class, 'update']);
+Route::post('/Dataprogramlainnya/delete/{id_program_lainnya}', [programlainnya_Controller::class, 'destroy']);
 
 Route::resource('/Dataprogramtriwulan', programtriwulan_Controller::class);
 Route::get('/Dataprogramtriwulan', [programtriwulan_Controller::class, 'index']);
@@ -178,7 +193,7 @@ Route::resource('Dataprogramharian', programharian_Controller::class)->middlewar
 Route::resource('Dataprogrammingguan', programmingguan_Controller::class)->middleware('isLogin');
 Route::resource('Dataprogramtriwulan', programtriwulan_Controller::class)->middleware('isLogin');
 Route::resource('Dataprograminsidental', programinsidental_Controller::class)->middleware('isLogin');
-Route::resource('Dataprogramharian', programharian_Controller::class)->middleware('isLogin');
+Route::resource('Dataprogramlainnya', programlainnya_Controller::class)->middleware('isLogin');
 
 Route::resource('Datamrpberbagi', mrpberbagi_Controller::class)->middleware('isLogin');
 Route::resource('Datagebyarramadhan', ramadhan_Controller::class)->middleware('isLogin');

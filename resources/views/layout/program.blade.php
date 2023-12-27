@@ -82,20 +82,20 @@
 
     {{-- PROGRAM MINGGUAN END --}}
 
-    {{-- PROGRAM TRIWULAN START --}}
+    {{-- PROGRAM LAINNYA START --}}
 
     <div class="container-fluid pt-5 pb-3">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">PROGRAM DI MASJID RADEN PATAH</h6>
-                <h3 class="mb-5">PROGRAM TRIWULAN</h3>
+                <h3 class="mb-5">PROGRAM LAINNYA</h3>
             </div>
             <div class="row portfolio-container">
-                @foreach ($program_triwulan as $data)
+                @foreach ($program_lainnya as $data)
                     <div class="col-lg-3 col-md-6 mb-4 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item bg-light">
                             <div class="position-relative overflow-hidden mb-2">
-                                <img class="img-fluid w-100" src="{{ asset('foto_programtriwulan/' . $data->gambar) }}" style="Width: 100%; height: 300px" alt="" />
+                                <img class="img-fluid w-100" src="{{ asset('foto_programlainnya/' . $data->gambar) }}" style="Width: 100%; height: 300px" alt="" />
                                 <div class="image-overlay">
                                     <div class="image-overlay-content">
                                         <p class="image-description">{{$data->keterangan}}</p>
@@ -112,34 +112,7 @@
         </div>
     </div>
 
-    {{-- PROGRAM TRIWULAN END --}}
-    
-
-    {{-- PROGRAM INSIDENTAL START --}}
-
-     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">PROGRAM DI MASJID RADEN PATAH</h6>
-                <h3 class="mb-5">PROGRAM INSIDENTAL</h3>
-            </div> 
-             <div class="owl-carousel testimonial-carousel position-relative">
-            @foreach ($program_insidental as $data)
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="{{asset('foto_programinsidental/' . $data->gambar)}}" style="width: 80px; height: 80px" alt="">
-                    <h5 class="mb-0">{{$data->nama_kegiatan}}</h5> 
-                    <hr> 
-                     {{-- <p>Profession</p>  --}}
-                     <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0">{{$data->keterangan}}</p>
-                    </div>
-                </div>
-            @endforeach
-            </div> 
-         </div>
-    </div>       
-
-    {{-- PROGRAM INSIDENTAL END --}}
+    {{-- PROGRAM LAINNYA END --}}
     
 @endsection
    

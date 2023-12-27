@@ -28,11 +28,27 @@ class user_controller extends Controller
     public function program () {
         $program_harian = DB::table('programharian')->get();
         $program_mingguan = DB::table('programmingguan')->get();
+        $program_lainnya = DB::table('programlainnya')->get();
         $program_insidental = DB::table('programinsidental')->get();
         $program_triwulan = DB::table('programtriwulan')->get();
-        return view ('layout/program', compact('program_harian', 'program_mingguan', 'program_insidental', 'program_triwulan')) ;
+        return view ('layout/program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
     }
 
+    public function progharian () {
+        $program_harian = DB::table('programharian')->get();
+        return view ('layout/programharianuser', compact('program_harian')) ;
+    }
+
+    public function progmingguan () {
+        $program_mingguan = DB::table('programmingguan')->get();
+        return view ('layout/programmingguanuser', compact('program_mingguan')) ;
+    }
+
+    public function proglainnya () {
+        $program_lainnya = DB::table('programlainnya')->get();
+        return view ('layout/programlainnyauser', compact('program_lainnya')) ;
+    }
+    
     public function event () {
         $mrpberbagi = DB::table('mrpberbagi')->get();
         $gebyarramadhan = DB::table('gebyarramadhan')->get();

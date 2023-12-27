@@ -8,18 +8,22 @@ class adminController extends Controller
 {
 
     public function index(){
-        return view('dashboard/index');
+        return view('Dashboard/index');
     }
 
     public function program_mingguan(){
-        return view('dashboardAdmin/programmingguan');
+        return view('DashboardAdmin/programmingguan');
+    }
+
+    public function program_lainnya(){
+        return view('DashboardAdmin/programlainnya');
     }
 
     public function program_triwulan(){
-        return view('dashboardAdmin/programtriwulan');
+        return view('DashboardAdmin/programtriwulan');
     }
 
     public function program_insidental(){
-        return view('dashboardAdmin/programinsidental');
+        return view('DashboardAdmin/programinsidental');
     }
 }

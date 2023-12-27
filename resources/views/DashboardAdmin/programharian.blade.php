@@ -189,9 +189,9 @@
                                             <div class="modal-header">
                                                 <h4 class="modal-title">TAMBAH DATA PROGRAM HARIAN<button type="button" class="close" data-dismiss="modal">&times;</button></h4>
                                             </div>
-                            
                                             <form method="post" enctype="multipart/form-data" action="/Dataprogramharian">
                                                 @csrf
+                                                @foreach ($programharian as $data)
                                                 <div class="modal-body">
                                                     <div class="form-group">
                                                         <div class="row">
@@ -236,6 +236,7 @@
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                                                     </div>
                                                 </div>
+                                                @endforeach
                                             </form>
                                         </div>
                                     </div>
