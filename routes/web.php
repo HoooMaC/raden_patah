@@ -189,11 +189,11 @@ Route::post('/signin/create', [login_Controller::class, 'create']);
 // REGISTER END
 
 // MIDDLEWARE START
-Route::resource('Dataprogramharian', programharian_Controller::class)->middleware('isLogin');
-Route::resource('Dataprogrammingguan', programmingguan_Controller::class)->middleware('isLogin');
-Route::resource('Dataprogramtriwulan', programtriwulan_Controller::class)->middleware('isLogin');
-Route::resource('Dataprograminsidental', programinsidental_Controller::class)->middleware('isLogin');
-Route::resource('Dataprogramlainnya', programlainnya_Controller::class)->middleware('isLogin');
+Route::resource('Dataprogramharian', programharian_controller::class)->middleware('isLogin');
+Route::resource('Dataprogrammingguan', programmingguan_controller::class)->middleware('isLogin');
+Route::resource('Dataprogramtriwulan', programtriwulan_controller::class)->middleware('isLogin');
+Route::resource('Dataprograminsidental', programinsidental_controller::class)->middleware('isLogin');
+Route::resource('Dataprogramlainnya', programlainnya_controller::class)->middleware('isLogin');
 
 Route::resource('Datamrpberbagi', mrpberbagi_Controller::class)->middleware('isLogin');
 Route::resource('Datagebyarramadhan', ramadhan_Controller::class)->middleware('isLogin');
