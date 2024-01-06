@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('programinsidental', function (Blueprint $table) {
             $table->increments('id_program_insidental');
-            $table->string('nama_kegiatan', 255)->nullable(false);
+            $table->string('nama_program', 255)->nullable(false);
             $table->string('keterangan', 255);
             $table->string('gambar');
             $table->timestamps();

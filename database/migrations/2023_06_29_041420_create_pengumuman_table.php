@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_kegiatan', 255)->nullable(false);
             $table->string('judul', 255);
             $table->string('pemateri');
-            $table->string('pelaksanaan');
+            $table->string('tanggal_pelaksanaan');
             $table->string('tempat');
             $table->timestamps();
         });

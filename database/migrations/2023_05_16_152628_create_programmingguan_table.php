@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('nama_program', 255)->nullable(false);
             $table->string('pelaksanaan', 255);
             $table->integer('jumlah_hadir');
+            $table->string('keterangan');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
