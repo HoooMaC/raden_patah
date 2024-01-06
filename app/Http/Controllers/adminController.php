@@ -3,27 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class adminController extends Controller
 {
-
     public function index(){
-        return view('Dashboard/index');
+        return view('Dashboard/admin');
+    }
+
+    public function program_harian(){
+        $programHarian = DB::table('programharian')->get();
+        return view('DashboardAdmin/programharian', compact('programHarian'));
     }
 
     public function program_mingguan(){
-        return view('DashboardAdmin/programmingguan');
+        $programMingguan = DB::table('programmingguan')->get();
+        return view('DashboardAdmin/programmingguan', compact('programMingguan'));
     }
 
     public function program_lainnya(){
-        return view('DashboardAdmin/programlainnya');
+        $programLainnya = DB::table('programlainnya')->get();
+        return view('DashboardAdmin/programlainnya', compact('programLainnya'));
     }
 
     public function program_triwulan(){
-        return view('DashboardAdmin/programtriwulan');
+        $programTriwulan = DB::table('programtriwulan')->get();
+        return view('DashboardAdmin/programtriwulan', compact('programTriwulan'));
     }
 
     public function program_insidental(){
-        return view('DashboardAdmin/programinsidental');
+        $programInsidental = DB::table('programinsidental')->get();
+        return view('DashboardAdmin/programinsidental', compact('programInsidental'));
     }
 }

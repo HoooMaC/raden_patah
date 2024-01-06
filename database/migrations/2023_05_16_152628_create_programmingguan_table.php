@@ -19,9 +19,6 @@ return new class extends Migration
             $table->string('pelaksanaan', 255);
             $table->integer('jumlah_hadir');
             $table->timestamps();
-
-
-
         });
     }
 

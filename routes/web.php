@@ -63,14 +63,14 @@ Route::post('/akadnikah', [user_Controller::class, 'addakadnikah']);
 Route::get('/konsultasikeagamaan', [user_controller::class, 'konsultasikeagamaan']);
 Route::post('/konsultasikeagamaan', [user_Controller::class, 'addkonsultasikeagamaan']);
 
+// TODO : FIXME
 Route::get('/dashboard', [adminController::class, 'index']);
 
+// program for Admin
+Route::get('/programharian', [adminController::class, 'program_harian']);
 Route::get('/programmingguan', [adminController::class, 'program_mingguan']);
-
 Route::get('/programlainnya', [adminController::class, 'program_lainnya']);
-
 Route::get('/programtriwulan', [adminController::class, 'program_triwulan']);
-
 Route::get('/programinsidental', [adminController::class, 'program_insidental']);
 
 Route::get('/tentang', [user_Controller::class, 'tentang']);
@@ -82,8 +82,7 @@ Route::get('/galerigebyarramadhan', [user_Controller::class, 'galerigebyarramadh
 Route::get('/galerisyiardisabilitas', [user_Controller::class, 'galerisyiardisabilitas']);
 
 
-Route::get('/admin', [UserController::class, 'admin'])->name('admin.dashboard');
-
+Route::get('/admin', [user_Controller::class, 'admin'])->name('admin.dashboard');
 
 Route::resource('/Dataprogramharian', programharian_Controller::class);
 Route::get('/Dataprogramharian', [programharian_Controller::class, 'index']);
