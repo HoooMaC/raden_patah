@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id_mrp_berbagi');
             $table->string('nama_kegiatan', 255)->nullable(false);
             $table->string('gambar');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
