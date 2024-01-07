@@ -5,11 +5,11 @@
                     {{-- <li><a href="/admin"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default"></span></a></li> --}}
                     <li><a href="#"><span class="icon color7"><i class="fa fa-regular fa-folder"></i></span>Progam<span class="caret"></span></a>
                       <ul>
-                        <li><a href="/Dataprogramharian"><i class= ></i> Program Harian</a></li>
-                        <li><a href="/Dataprogrammingguan"><i class=></i> Program Mingguan</a></li>
-                        <li><a href="/Dataprogramlainnya"><i class=></i> Program Lainnya</a></li>
-                        <li><a href="/Dataprogramtriwulan"><i class=></i> Program Triwulan</a></li>
-                        <li><a href="/Dataprograminsidental"><i class=></i> Program Insidental</a></li>
+                        <li><a href="/programharian"><i class= ></i> Program Harian</a></li>
+                        <li><a href="/programmingguan"><i class=></i> Program Mingguan</a></li>
+                        <li><a href="/programlainnya"><i class=></i> Program Lainnya</a></li>
+                        <li><a href="/programtriwulan"><i class=></i> Program Triwulan</a></li>
+                        <li><a href="/programinsidental"><i class=></i> Program Insidental</a></li>
                       </ul>
                     </li>
                       {{-- <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>Master Data<span class="caret"></span></a> 
