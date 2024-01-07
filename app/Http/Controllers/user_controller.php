@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Role;
 use App\Models\pengumuman1;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class user_controller extends Controller
@@ -13,12 +14,13 @@ class user_controller extends Controller
     }
 
     public function home(){
-        $pengumuman1 = DB::table('pengumuman')->get();
-        return view ('layout/home', compact('pengumuman1')) ;
-    }
+        // TODO : Target
+        //$pengumuman = Pengumuman::incoming();
 
-    public function tentang(){
-        return view('layout/tentang');
+        // $pengumuman1 = DB::table('pengumuman')->get();
+        // return view ('user.home', compact('pengumuman1'));
+
+        return view ('user.home');
     }
 
     public function admin(){
@@ -28,32 +30,17 @@ class user_controller extends Controller
     public function program () {
         $program_harian = DB::table('programharian')->get();
         $program_mingguan = DB::table('programmingguan')->get();
-        $program_lainnya = DB::table('programlainnya')->get();
-        $program_insidental = DB::table('programinsidental')->get();
         $program_triwulan = DB::table('programtriwulan')->get();
-        return view ('layout/program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
-    }
-
-    public function progharian () {
-        $program_harian = DB::table('programharian')->get();
-        return view ('layout/programharianuser', compact('program_harian')) ;
-    }
-
-    public function progmingguan () {
-        $program_mingguan = DB::table('programmingguan')->get();
-        return view ('layout/programmingguanuser', compact('program_mingguan')) ;
-    }
-
-    public function proglainnya () {
+        $program_insidental = DB::table('programinsidental')->get();
         $program_lainnya = DB::table('programlainnya')->get();
-        return view ('layout/programlainnyauser', compact('program_lainnya')) ;
+        return view ('User.program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
     }
-    
+
     public function event () {
         $mrpberbagi = DB::table('mrpberbagi')->get();
         $gebyarramadhan = DB::table('gebyarramadhan')->get();
         $syiar = DB::table('syiar')->get();
-        return view ('layout/event', compact('mrpberbagi', 'gebyarramadhan', 'syiar')) ;
+        return view ('user.event', compact('mrpberbagi', 'gebyarramadhan', 'syiar')) ;
     }
 
     // public function pengumuman () {
@@ -63,11 +50,11 @@ class user_controller extends Controller
 
 
     public function unit () {
-        return view ('layout/unit') ;
+        return view ('user.unit') ;
     }
 
     public function layanan () {
-        return view ('layout/layanan') ;
+        return view ('user.layanan') ;
     }
 
     public function galerimrpberbagi () {
@@ -82,14 +69,7 @@ class user_controller extends Controller
         return view ('layout/galerisyiardisabilitas') ;
     }
 
-    
-
-    
-
-    
-
     //MUALAF CENTER START
-
     public function mualafcenter () {
         return view ('layout/mualafcenter') ;
     }
@@ -97,10 +77,10 @@ class user_controller extends Controller
     public function addmualafcenter(Request $request){
         $request-> validate([
             'nama' => 'required|max:255',
-            'alamat' => 'required|max:255', 
+            'alamat' => 'required|max:255',
             'telpon' => 'required',
             'email' => 'required',
-            
+
 
         ]);
 
@@ -109,7 +89,7 @@ class user_controller extends Controller
             'alamat' => $request ['alamat'],
             'telpon' => $request ['telpon'],
             'email' => $request ['email'],
-            
+
         ]);
 
         return redirect ('/mualafcenter')->with('success', 'Pendaftaran Berhasil');
@@ -119,7 +99,7 @@ class user_controller extends Controller
 
 
 
-    // KONSULTASI KEAGAMAAN START 
+    // KONSULTASI KEAGAMAAN START
 
     public function konsultasikeagamaan () {
         return view ('layout/konsultasikeagamaan') ;
@@ -128,7 +108,7 @@ class user_controller extends Controller
     public function addkonsultasikeagamaan(Request $request){
         $request-> validate([
             'nama' => 'required|max:255',
-            'alamat' => 'required|max:255', 
+            'alamat' => 'required|max:255',
             'telpon' => 'required',
             'email' => 'required',
 
@@ -149,7 +129,7 @@ class user_controller extends Controller
 
 
     // AKAD NIKAH START
-    
+
     public function akadnikah () {
         return view ('layout/akadnikah') ;
     }
@@ -157,10 +137,10 @@ class user_controller extends Controller
     public function addakadnikah(Request $request){
         $request-> validate([
             'nama' => 'required|max:255',
-            'alamat' => 'required|max:255', 
+            'alamat' => 'required|max:255',
             'telpon' => 'required',
             'email' => 'required',
-            
+
 
         ]);
 
@@ -169,7 +149,7 @@ class user_controller extends Controller
             'alamat' => $request ['alamat'],
             'telpon' => $request ['telpon'],
             'email' => $request ['email'],
-            
+
         ]);
 
         return redirect ('/akadnikah')->with('success', 'Pendaftaran Berhasil');
