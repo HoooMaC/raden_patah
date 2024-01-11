@@ -38,15 +38,14 @@
     </div>
 
 
-    @isset($pengumuman1)
+    @isset($pengumuman)
         <div class="text-center">
             <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1>
         </div>
-        @foreach ($pengumuman1 as $data)
+        @foreach ($pengumuman as $data)
             <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        {{-- <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i> --}}
                         <h1 class="mb-3">{{ $data->nama_kegiatan }}</h1>
                         <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $data->judul }}&rdquo;</h4>
                         <h3>{{ $data->pemateri }}</h3>

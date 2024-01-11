@@ -19,10 +19,10 @@ return new class extends Migration
                 $table->id();
                 $table->string('title');
                 $table->text('description');
-                $table->text('icon')->nullable();
+                $table->string('icon')->nullable();
                 $table->boolean('isActive')->default(true);
                 $table->foreignId('role_id')->constrained('roles');
-                $table->foreignId('program_category_id')->constrained('program_category');
+                $table->foreignId('program_category_id')->constrained('program_categories');
                 $table->timestamps();
             });
         Schema::enableForeignKeyConstraints();

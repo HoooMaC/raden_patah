@@ -19,9 +19,10 @@ class ProgramFactory extends Factory
         return [
             'title' => fake()->sentence(3,10),
             'description' => fake()->sentence(10,50),
+            'icon' => '',
             'isActive' => true,
-            'role_id' => 2,
-            'program_category_id' => 1
+            'role_id' => 1,
+            'program_category_id' => fake()->numberBetween(1,5)
         ];
     }
 }

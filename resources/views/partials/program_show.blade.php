@@ -7,18 +7,28 @@
         <div class="row">
             <div class="col d-flex justify-content-center gap-3">
                 @foreach ($programs as $program)
+                    {{-- @dd($programs) --}}
                     <div class="card d-flex align-item-center first wow fadeInUp bg-light border-0" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ asset($lokasi_gambar . $program->gambar) }}" alt="{{ $program->nama_program }}" height="80%" />
+                        @if ($program->icon !== '')
+                            <img class="card-img-top" src="{{ asset($program->icon) }}" alt="{{ $program->title }}"
+                                height="80%" />
+                        @else
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100"
+                                fill="#ccc">
+                                <!-- Your SVG content here -->
+                                <rect width="100%" height="100%" rx="15" />
+                            </svg>
+                        @endif
                         <div class="image-overlay">
                             <div class="image-overlay">
                                 <div class="image-overlay-content">
-                                    <p class="image-description">{{ $program->keterangan }}</p>
+                                    <p class="image-description">{{ $program->description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center">{{ $program->nama_program }}</h5>
-                            <p class="text-center">{{ $program->pelaksanaan }}</p>
+                            <h5 class="card-title text-center">{{ $program->title }}</h5>
+                            {{-- <p class="text-center">{{ $program->description }}</p> --}}
                         </div>
                     </div>
                 @endforeach

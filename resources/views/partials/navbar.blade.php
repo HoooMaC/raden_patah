@@ -9,8 +9,6 @@
                 class="nav-item nav-link {{ Request::path() === 'home' ? 'active' : '' }}">Profil</a>
             <a href="{{ url('/program') }}"
                 class="nav-item nav-link {{ Request::path() === 'program' ? 'active' : '' }}">Program</a>
-            <a href="{{ url('/event') }}"
-                class="nav-item nav-link {{ Request::path() === 'event' ? 'active' : '' }}">Event</a>
             <a href="{{ url('/unit') }}"
                 class="nav-item nav-link {{ Request::path() === 'unit' ? 'active' : '' }}">Unit</a>
             <a href="{{ url('/layanan') }}"

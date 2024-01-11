@@ -21,8 +21,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
         Role::factory()->create(['name' => "jama'ah" ]);
         Role::factory()->create(['name' => "admin" ]);
         Role::factory()->create(['name' => "takmir" ]);
@@ -36,7 +34,6 @@ class DatabaseSeeder extends Seeder
         ProgramCategory::factory()->create(['title' => 'Program Mingguan']);
         ProgramCategory::factory()->create(['title' => 'Program Triwulan']);
         ProgramCategory::factory()->create(['title' => 'Program Insidental']);
-        ProgramCategory::factory()->create(['title' => 'Program Lainnya']);
 
         PostCategory::factory()->create(['title' => 'Agama']);
         PostCategory::factory()->create(['title' => 'Ilmiah']);
@@ -50,8 +47,17 @@ class DatabaseSeeder extends Seeder
             'role_id' => '2',
         ]);
 
+        // Program::factory()->create([
+        //     'title' => 'Gunawan',
+        //     'description' => 'gunawan',
+        //     'icon' => '',
+        //     'isActive' => true,
+        //     'role_id' => '2',
+        //     'password' => 'password',
+        // ]);
+
         User::factory(10)->create();
         Announcement::factory(10)->create();
-        // Program::factory(10)->create();
+        Program::factory(20)->create();
     }
 }

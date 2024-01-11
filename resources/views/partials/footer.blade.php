@@ -5,11 +5,11 @@
                 <h4 class="text-white mb-3">Quick Link</h4>
                 <a class="btn btn-link" href="/home">Profil</a>
                 <a class="btn btn-link" href="/program">Program</a>
-                    <ul>
+                    {{-- <ul>
                         <li><a class="btn btn-link" href="/progharian">Program Harian</a></li>
                         <li><a class="btn btn-link" href="/progmingguan">Program Mingguan</a></li>
                         <li><a class="btn btn-link" href="/proglainnya">Program Lainnya</a></li>
-                    </ul>
+                    </ul> --}}
                 <a class="btn btn-link" href="/event">Event</a>
                 <a class="btn btn-link" href="/unit">Unit</a>
                 <a class="btn btn-link" href="/layanan">Layanan</a>
@@ -67,7 +67,7 @@
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                 </div>
-                {{-- <div class="col-md-6 text-center text-md-end"> 
+                {{-- <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
                         <a href="">Home</a>
                         <a href="">Cookies</a>

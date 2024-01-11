@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Role;
+use App\Models\Program;
 use App\Models\pengumuman1;
+use App\Models\ProgramCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,14 +29,39 @@ class user_controller extends Controller
         return view('Dashboard/admin');
     }
 
-    public function program () {
-        $program_harian = DB::table('programharian')->get();
-        $program_mingguan = DB::table('programmingguan')->get();
-        $program_triwulan = DB::table('programtriwulan')->get();
-        $program_insidental = DB::table('programinsidental')->get();
-        $program_lainnya = DB::table('programlainnya')->get();
-        return view ('User.program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
+    public function program()  {
+        $all_program = [];
+
+        // Ambil semua kategori program
+        $categories = ProgramCategory::all();
+
+        // Iterasi melalui setiap kategori program
+        foreach ($categories as $category) {
+            // Ambil program-program terkait dengan kategori ini
+            $programs = Program::getProgramsPerCategory($category->id);
+
+
+            // simpan juga title dari category ke dalam array all program
+            // Simpan dalam array $all_program
+            $all_program[$category->title] = [
+                'category_title' => $category->title,
+                'programs' => $programs,
+            ];
+        }
+
+        return view('user.program', ['all_program' => $all_program]);
     }
+
+    // OLD
+    // public function program () {
+        // $program_harian = DB::table('programharian')->get();
+        // $program_mingguan = DB::table('programmingguan')->get();
+        // $program_triwulan = DB::table('programtriwulan')->get();
+        // $program_insidental = DB::table('programinsidental')->get();
+        // $program_lainnya = DB::table('programlainnya')->get();
+        // return view ('User.program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
+        // return view ('User.program');
+    // }
 
     public function event () {
         $mrpberbagi = DB::table('mrpberbagi')->get();
