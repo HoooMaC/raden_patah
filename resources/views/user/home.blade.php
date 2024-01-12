@@ -38,31 +38,38 @@
     </div>
 
 
-    @isset($pengumuman)
+    @isset($announcements)
         <div class="text-center">
             <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1>
         </div>
-        @foreach ($pengumuman as $data)
-            <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <h1 class="mb-3">{{ $data->nama_kegiatan }}</h1>
-                        <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $data->judul }}&rdquo;</h4>
-                        <h3>{{ $data->pemateri }}</h3>
-                        <p>{{ $data->pelaksanaan }}</p>
-                        <p>{{ $data->tempat }}</p>
+        {{-- Looping semua pengumuman --}}
+        @foreach ($announcements as $announcement)
+            {{-- Bagian pengumuman terdekat --}}
+            @if ($loop->first)
+                <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $announcement->title }}&rdquo;
+                            </h4>
+                            <p>{{ $announcement->body }}</p>
+                            <p>{{ $announcement->caption }}</p>
+                            <p>{{ $announcement->date }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {{-- Bagian pengumuman segera datang : 3 --}}
+            @else
+                <div class="text-center">
+                    <h4>&ldquo;{{ $announcement->title }}</h4>
+                    <p>{{ $announcement->body }}</p>
+                    <p>{{ $announcement->caption }}</p>
+                    <p>{{ $announcement->date }}</p>
+                </div>
+            @endif
         @endforeach
     @endisset
 
-
-    {{-- TENTANG START --}}
-
     @include('partials.tentang')
-
-    {{-- TENTANG END --}}
 
     {{-- PENJELASAN START --}}
 
@@ -128,10 +135,11 @@
     </div>
     </div>
 
+
     {{-- Fasilitas Start --}}
-
     @include('partials.fasilitas')
-
     {{-- Fasilitas End --}}
+
     @include('partials.artikel')
+
 @endsection

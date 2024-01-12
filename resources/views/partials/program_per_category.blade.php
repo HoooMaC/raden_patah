@@ -2,12 +2,11 @@
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">PROGRAM DI MASJID RADEN PATAH</h6>
-            <h3 class="mb-5">{{ $judul_program }}</h3>
+            <h3 class="mb-5">{{ strtoupper($programs['category_title']) }}</h3>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center gap-3">
-                @foreach ($programs as $program)
-                    {{-- @dd($programs) --}}
+                @foreach ($programs['list'] as $program)
                     <div class="card d-flex align-item-center first wow fadeInUp bg-light border-0" style="width: 18rem;">
                         @if ($program->icon !== '')
                             <img class="card-img-top" src="{{ asset($program->icon) }}" alt="{{ $program->title }}"
@@ -27,8 +26,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center">{{ $program->title }}</h5>
-                            {{-- <p class="text-center">{{ $program->description }}</p> --}}
+                            <h5 class="card-title text-center">{{ ucwords($program->title) }}</h5>
                         </div>
                     </div>
                 @endforeach

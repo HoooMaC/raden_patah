@@ -1,25 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\user_controller;
-use App\Http\Controllers\adminController;
-use App\Http\Controllers\programharian_Controller;
-use App\Http\Controllers\programlainnya_controller;
-use App\Http\Controllers\program_harian_Controller;
-use App\Http\Controllers\programmingguan_Controller;
-use App\Http\Controllers\programtriwulan_Controller;
-use App\Http\Controllers\programinsidental_Controller;
-use App\Http\Controllers\mrpberbagi_Controller;
-use App\Http\Controllers\mualafcenter_Controller;
-use App\Http\Controllers\konsultasikeagamaan_Controller;
-use App\Http\Controllers\akadnikah_Controller;
+
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\login_Controller;
-use App\Http\Controllers\ramadhan_Controller;
-use App\Http\Controllers\syiar_Controller;
 use App\Http\Controllers\pengumuman_Controller;
 use App\Http\Controllers\ArtikelController;
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -36,27 +23,27 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/test', [user_controller::class, 'test']);
-Route::get('/home', [user_controller::class, 'home']);
-Route::get('/program', [user_controller::class, 'program']);
-Route::get('/event', [user_controller::class, 'event']);
-Route::get('/unit', [user_controller::class, 'unit']);
-Route::get('/layanan', [user_controller::class, 'layanan'])->name('pages.layanan');
+Route::get('/test', [UserController::class, 'test']);
+Route::get('/home', [UserController::class, 'home']);
+Route::get('/program', [UserController::class, 'program']);
+Route::get('/event', [UserController::class, 'event']);
+Route::get('/unit', [UserController::class, 'unit']);
+Route::get('/layanan', [UserController::class, 'layanan'])->name('pages.layanan');
 
 // ?TEMPORARY inactive for now
-// Route::get('/pengumuman', [user_controller::class, 'pengumuman'])->name('pages.pengumuman');
+// Route::get('/pengumuman', [UserController::class, 'pengumuman'])->name('pages.pengumuman');
 
 // TODO : FIXME
-Route::get('/dashboard', [adminController::class, 'index']);
-Route::get('/admin', [user_Controller::class, 'admin'])->name('admin.dashboard');
+Route::get('/dashboard', [AdminController::class, 'index']);
+Route::get('/admin', [UserController::class, 'admin'])->name('admin.dashboard');
 
 // TODO : add authentication depends on the role
 // program for Admin
-Route::get('/programharian', [adminController::class, 'program_harian']);
-Route::get('/programmingguan', [adminController::class, 'program_mingguan']);
-Route::get('/programlainnya', [adminController::class, 'program_lainnya']);
-Route::get('/programtriwulan', [adminController::class, 'program_triwulan']);
-Route::get('/programinsidental', [adminController::class, 'program_insidental']);
+Route::get('/programharian', [AdminController::class, 'program_harian']);
+Route::get('/programmingguan', [AdminController::class, 'program_mingguan']);
+Route::get('/programlainnya', [AdminController::class, 'program_lainnya']);
+Route::get('/programtriwulan', [AdminController::class, 'program_triwulan']);
+Route::get('/programinsidental', [AdminController::class, 'program_insidental']);
 
 Route::resource('/pengumuman', pengumuman_Controller::class);
 Route::get('/pengumuman', [pengumuman_Controller::class, 'index']);

@@ -13,7 +13,8 @@
 
 {{-- @dd($all_program) --}}
 @foreach ($all_program as $programs)
-    @include('partials.program_show', ['judul_program' => $programs['category_title'], 'programs' => $programs['programs']])
+    {{-- @include('partials.program_show', ['judul_program' => $programs['category_title'], 'programs' => $programs['programs']]) --}}
+    @include('partials.program_per_category')
 @endforeach
 
 {{-- @include('partials.program_show', ['judul_program' => 'PROGRAM HARIAN',   'lokasi_gambar' => 'foto_programharian/','programs' => $program_harian])
