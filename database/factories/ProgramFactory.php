@@ -17,12 +17,13 @@ class ProgramFactory extends Factory
     public function definition()
     {
         return [
-            'title' => fake()->sentence(3,10),
-            'description' => fake()->sentence(10,50),
+            'title' => fake()->sentence(3, 10),
+            'description' => fake()->sentence(10, 50),
+            'time' => fake()->sentence(3, 10),
             'icon' => '',
             'isActive' => true,
             'role_id' => 1,
-            'program_category_id' => fake()->numberBetween(1,5)
+            'program_category_id' => fake()->numberBetween(1, 4)
         ];
     }
 }
