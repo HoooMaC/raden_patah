@@ -19,7 +19,7 @@ return new class extends Migration
                 $table->id();
                 $table->string('title');
                 $table->text('description');
-                $table->string('time');
+                $table->string('time')->nullable();
                 $table->string('icon')->nullable();
                 $table->boolean('isActive')->default(true);
                 $table->foreignId('role_id')->constrained('roles');

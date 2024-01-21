@@ -47,17 +47,8 @@ class DatabaseSeeder extends Seeder
             'role_id' => '2',
         ]);
 
-        // Program::factory()->create([
-        //     'title' => 'Gunawan',
-        //     'description' => 'gunawan',
-        //     'icon' => '',
-        //     'isActive' => true,
-        //     'role_id' => '2',
-        //     'password' => 'password',
-        // ]);
-
         User::factory(10)->create();
         Announcement::factory(10)->create();
-        Program::factory(20)->create();
+        Program::factory(50)->create();
     }
 }

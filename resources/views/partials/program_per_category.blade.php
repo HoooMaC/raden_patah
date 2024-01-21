@@ -6,11 +6,11 @@
         </div>
 
         <!-- Carousel Section -->
-        <div id="programCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="{{ str_replace(' ', '-', $programs['category_title']) }}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @php
                     $count = 0;
-                    $carouselId = 'programCarousel';
+                    $carouselId = str_replace(' ', '-', $programs['category_title']);
                 @endphp
                 @foreach ($programs['list'] as $program)
                     @if ($count % 4 == 0)
