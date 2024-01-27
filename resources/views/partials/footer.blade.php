@@ -1,5 +1,5 @@
-<footer class="text-center bg-dark text-white footer wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-4">
+<footer class="mt-5 text-center bg-dark text-white footer wow fadeIn" data-wow-delay="0.1s">
+    <div class="container pt-5 pb-1">
         <div class="d-flex justify-content-center">
             <a class="btn btn-outline-light btn-social" href="https://wa.me/+628993117777"><i class="fab fa-whatsapp" ></i></a>
             <p class="btn text-white">0899 3117 777 </p>
