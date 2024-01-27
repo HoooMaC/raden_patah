@@ -3,14 +3,15 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-
 use App\Models\Role;
+
 use App\Models\User;
-use App\Models\Announcement;
 use App\Models\Program;
-use App\Models\ProgramCategory;
+use App\Models\Announcement;
 use App\Models\PostCategory;
+use App\Models\ProgramCategory;
+use Illuminate\Database\Seeder;
+use Database\Seeders\ProgramIn2024Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,7 +34,7 @@ class DatabaseSeeder extends Seeder
         ProgramCategory::factory()->create(['title' => 'Program Harian']);
         ProgramCategory::factory()->create(['title' => 'Program Mingguan']);
         ProgramCategory::factory()->create(['title' => 'Program Triwulan']);
-        ProgramCategory::factory()->create(['title' => 'Program Insidental']);
+        ProgramCategory::factory()->create(['title' => 'Program Tahunan']);
 
         PostCategory::factory()->create(['title' => 'Agama']);
         PostCategory::factory()->create(['title' => 'Ilmiah']);
@@ -49,6 +50,9 @@ class DatabaseSeeder extends Seeder
 
         User::factory(10)->create();
         Announcement::factory(10)->create();
-        Program::factory(50)->create();
+        // Program::factory(50)->create();
+        $this->call(
+            class: ProgramIn2024Seeder::class,
+        );
     }
 }

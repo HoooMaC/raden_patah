@@ -19,7 +19,7 @@ class ProgramFactory extends Factory
         return [
             'title' => fake()->sentence(3, 10),
             'description' => fake()->sentence(10, 50),
-            'time' => fake()->sentence(3, 10),
+            // 'time' => fake()->sentence(3, 10),
             'icon' => '',
             'isActive' => true,
             'role_id' => 1,
