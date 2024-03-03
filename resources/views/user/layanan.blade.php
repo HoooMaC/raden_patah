@@ -28,15 +28,14 @@
             <h6 class="section-title bg-white text-center text-primary px-3">LAYANAN DI MASJID RADEN PATAH</h6>
             <h1 class="mb-5">LAYANAN</h1>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center ">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="course-item bg-light"style="width: 100%; height: 100%;">
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="img/8.png" alt="">
                     </div>
-                    <div class="text-center p-4 pb-0">
+                    <div class="text-center p-2 pb-2">
                         <h3 class="mb-0">Mualaf Center</h3>
-                        <h6 class ="mb-4">Program yang bertugas melakukan pembinaan dan pendampingan kepada mualaf sesuai tuntutan syara' agar menjadi muslim dan muslimah Kaffah.</h6>
                     </div>
                 </div>
             </div>
@@ -45,9 +44,8 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="img/19.png" alt="">
                     </div>
-                    <div class="text-center p-4 pb-0">
+                    <div class="text-center p-2 pb-2">
                         <h3 class="mb-0">Konsultasi Keagamaan</h3>
-                        <h6 class="mb-4">Program pelayanan konsultasi kepada masyarakat terkait syariat Islam agar menjadi muslim dan muslimah Kaffah</h6>
                     </div>
                 </div>
             </div>
@@ -56,9 +54,8 @@
                    <div class="position-relative overflow-hidden">
                        <img class="img-fluid" src="img/7.png" alt="">
                    </div>
-                   <div class="text-center p-4 pb-0">
+                   <div class="text-center p-2 pb-2">
                        <h3 class="mb-0">Pelayanan Akad Nikah</h3>
-                       <h6 class="mb-4">Program pelayanan nikah kepada masyarakat yang ingin akad di Masjid Raden Patah sesuai syariat Islam</h6>
                    </div>
                </div>
            </div>
