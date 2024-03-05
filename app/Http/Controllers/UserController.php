@@ -49,23 +49,6 @@ class UserController extends Controller
         return view('user.program', compact('all_program'));
     }
 
-    // OLD
-    // public function program () {
-        // $program_harian = DB::table('programharian')->get();
-        // $program_mingguan = DB::table('programmingguan')->get();
-        // $program_triwulan = DB::table('programtriwulan')->get();
-        // $program_insidental = DB::table('programinsidental')->get();
-        // $program_lainnya = DB::table('programlainnya')->get();
-        // return view ('User.program', compact('program_harian', 'program_mingguan', 'program_lainnya', 'program_insidental', 'program_triwulan')) ;
-        // return view ('User.program');
-    // }
-
-    // public function pengumuman () {
-    //     $pengumuman1 = DB::table('pengumuman')->get();
-    //     return view ('layout/home', compact('pengumuman1')) ;
-    // }
-
-
     public function unit () {
         return view ('user.unit') ;
     }

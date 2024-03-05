@@ -19,12 +19,9 @@ use App\Http\Controllers\ArtikelController;
 |
 */
 
-Route::get('/', function () {
-    return redirect('/home');
-});
+Route::get('/', [UserController::class, 'home']);
+Route::get('/public/httpdocs', [UserController::class, 'home']);
 
-Route::get('/test', [UserController::class, 'test']);
-Route::get('/home', [UserController::class, 'home']);
 Route::get('/program', [UserController::class, 'program']);
 Route::get('/event', [UserController::class, 'event']);
 Route::get('/unit', [UserController::class, 'unit']);
