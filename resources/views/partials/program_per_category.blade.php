@@ -18,21 +18,19 @@
                             <div class="row justify-content-center">
                     @endif
 
-                    <div class="col-6 col-md-3">
-                        <div class="card bg-light border-0" style="width: 18rem; min-width: 18rem;">
+                    <div class="col-12 col-sm-6 col-md-3 mb-3">
+                        <div class="card bg-light border-0">
                             <div class="program-item">
                                 <div class="position-relative">
                                     @if ($program->icon !== '')
-                                        <img class="img-fluid" src="{{ asset($program->icon) }}"
-                                            alt="{{ $program->title }}" />
+                                        <img class="img-fluid" src="{{ asset($program->icon) }}" alt="{{ $program->title }}" />
                                     @else
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="img-fluid"
-                                            fill="#ccc">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="img-fluid" fill="#ccc">
                                             <!-- Your SVG content here -->
                                             <rect width="100%" height="100%" rx="15" />
                                         </svg>
                                     @endif
-                                    <div class="program-overlay">
+                                    <div class="program-overlay" style="font-size: 14px; padding: 10px;">
                                         <p>{{ $program->description }}</p>
                                     </div>
                                 </div>
@@ -47,27 +45,29 @@
                     @php $count++; @endphp
 
                     @if ($count % 4 == 0 || $loop->last)
+                        </div>
+                    </div>
+                    @endif
+                @endforeach
             </div>
+            @if (count($programs['list']) > 4)
+                <div class="d-flex justify-content-between mt-3">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ $carouselId }}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#{{ $carouselId }}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            @endif
         </div>
-        @endif
-        @endforeach
     </div>
-    @if (count($programs['list']) > 4)
-        <button class="carousel-control-prev" type="button" data-bs-target="#{{ $carouselId }}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#{{ $carouselId }}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    @endif
 </div>
 <!-- End Carousel Section -->
-</div>
 <script>
     var {{ $carouselId }} = new bootstrap.Carousel(document.querySelector('#{{ $carouselId }}'), {
         interval: false,
     });
 </script>
-</div>
