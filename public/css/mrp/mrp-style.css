@@ -1,0 +1,52 @@
+:root {
+    --mrp-blue: #0d6efd;
+    --mrp-indigo: #6610f2;
+    --mrp-purple: #6f42c1;
+    --mrp-pink: #d63384;
+    --mrp-red: #dc3545;
+    --mrp-orange: #fd7e14;
+    --mrp-yellow: #ffc107;
+    --mrp-green: #198754;
+    --mrp-teal: #20c997;
+    --mrp-cyan: #0dcaf0;
+    --mrp-white: #fff;
+    --mrp-gray: #6c757d;
+    --mrp-gray-dark: #343a40;
+    --mrp-primary: #06bbcc;
+    --mrp-secondary: #6c757d;
+    --mrp-success: #198754;
+    --mrp-info: #0dcaf0;
+    --mrp-warning: #ffc107;
+    --mrp-danger: #dc3545;
+    --mrp-light: #f0fbfc;
+    --mrp-dark: #181d38;
+
+    /* Size */
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4 ,h5, h6 {
+    margin: 0;
+    /* font-family: "Inter",sans-serif; */
+    /* font-weight: 700; */
+    /* line-height: 1.2; */
+    /* color: #181d38 */
+}
