@@ -30,9 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mrp/mrp-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-program.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mrp/mrp-utils.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    @vite('resources/js/app.js')
 </head>
 
 <body>
@@ -64,6 +67,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/mrp/mrp-navbar.js') }}"></script>
 </body>
 
 </html>
