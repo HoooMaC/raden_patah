@@ -1,20 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class=""></i>Masjid Raden Patah</h2>
+<nav class="mrp-navbar">
+    <a href="{{ url('/') }}" class="mrp-navbar__logo">
+        <h2>Masjid Raden Patah</h2>
     </a>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav me-4 ms-auto p-4 p-lg-0 d-flex align-items-center">
-            <a href="{{ url('/') }}"
-                class="nav-item nav-link {{ Request::path() === 'home' ? 'active' : '' }}">Profil</a>
-            <a href="{{ url('/program') }}"
-                class="nav-item nav-link {{ Request::path() === 'program' ? 'active' : '' }}">Program</a>
-            <a href="{{ url('/unit') }}"
-                class="nav-item nav-link {{ Request::path() === 'unit' ? 'active' : '' }}">Unit</a>
-            <a href="{{ url('/layanan') }}"
-                class="nav-item nav-link {{ Request::path() === 'layanan' ? 'active' : '' }}">Layanan</a>
-            {{-- TEMPORARY Inactive for now --}}
-            {{-- <a href="{{ url('/signin') }}" class="btn btn-primary h-50">Login</a> --}}
-        </div>
+    <div class="mrp-navbar__list" id="navbarCollapse">
+        <a href="{{ url('/') }}" class="mrp-navbar__link {{ Request::path() === '/' ? 'active' : '' }}">Profil</a>
+        <a href="{{ url('/program') }}"
+            class="mrp-navbar__link {{ Request::path() === 'program' ? 'active' : '' }}">Program</a>
+        <a href="{{ url('/unit') }}" class="mrp-navbar__link {{ Request::path() === 'unit' ? 'active' : '' }}">Unit</a>
+        <a href="{{ url('/layanan') }}"
+            class="mrp-navbar__link {{ Request::path() === 'layanan' ? 'active' : '' }}">Layanan</a>
+        {{-- TEMPORARY Inactive for now --}}
+        {{-- <a href="{{ url('/signin') }}" class="btn btn-primary h-50">Login</a> --}}
     </div>
+    <i class="mrp-navbar__bars  fa-solid fa-bars"></i>
 </nav>
