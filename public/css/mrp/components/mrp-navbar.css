@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 6rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border-bottom: 2px solid var(--mrp-primary);
@@ -16,12 +16,11 @@
 }
 
 .mrp-navbar__logo h2{
-    margin-top: 0.5rem;
     color: var(--mrp-primary);
 }
 
 .mrp-navbar__list {
-    position: fixed;
+    position: absolute;
     top: 0;
     /* right: 0; */
     right: -100%;
@@ -36,7 +35,6 @@
     border-left: 2px solid var(--mrp-primary);
     background-color: white;
     transition: right 0.7s;
-    z-index: 0;
 }
 
 .mrp-navbar__list.active {
@@ -69,9 +67,9 @@
 }
 
 .mrp-navbar__bars {
-    position: fixed;
+    position: absolute;
     right: 0;
-    padding-right: 1rem;
+    padding-right: 2rem;
     font-size: var(--size-2xl);
     cursor: pointer;
     z-index: 4;
@@ -84,12 +82,13 @@
 /* lg */
 @media (min-width: 1200px) {
     .mrp-navbar {
-        position: static;
+        position: fixed;
         padding-left: 2rem;
         padding-right: 2rem;
         display: flex;
     }
-    .mrp-navbar__bars {
+
+    .mrp-navbar .mrp-navbar__bars  {
         display: none;
     }
 
