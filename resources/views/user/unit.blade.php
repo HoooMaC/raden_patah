@@ -47,7 +47,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 order-last order-md-first wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="mb-4">PTQ (Pusat Tahfidz Qur'an) </h2>
                     <p class="mb-4" style="text-align: justify">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quis distinctio quos quam deserunt
@@ -61,7 +61,7 @@
                     </p>
                     <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-lg-6 order-first order-md-last wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-75" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%;"
                             src="{{ asset('logo_unit/Logo_PTQ.png') }}" alt="logo ptq" style="object-fit: cover;">
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
     <!-- PTQ End -->
 
@@ -110,7 +110,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 order-last order-md-first wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="mb-4">IMC (Imam Muda Center)</h2>
                     <p class="mb-4" style="text-align: justify">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quis distinctio quos quam deserunt
@@ -125,7 +125,7 @@
                     <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
                     {{-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> --}}
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-lg-6 order-first order-md-last wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100" style="display:flex; align-items:center; justify-content:center;">
                         <img class="img-fluid position-absolute" style="max-height: 100%"
                             src="{{ asset('logo_unit/Logo_IMC.png') }}" alt="logo imam muda center"
