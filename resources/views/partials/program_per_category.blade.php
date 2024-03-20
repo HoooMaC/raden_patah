@@ -9,7 +9,7 @@
             @foreach ($programs['list'] as $program)
                 <div class="program-card">
                     <div class="program-card__image-container">
-                        <img class="program-card__image" src="/img/footage_mrp/footage_mesjid_1.jpg" alt="kismala" />
+                        <img class="program-card__image" src="{{ asset($program->icon) }}" alt="{{ $program->title }}" />
                     </div>
                     <div class="program-card__title-container">
                         <h5 class="program-card__title">{{ ucwords($program->title) }}</h5>

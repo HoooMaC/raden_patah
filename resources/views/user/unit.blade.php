@@ -34,7 +34,7 @@
                         architecto accusantium temporibus eligendi repellat, aut harum dolore deleniti perspiciatis iste
                         aperiam unde sint quis porro eos error perferendis. Aliquam, molestiae libero! Autem esse quaerat
                         sed nisi sit earum soluta expedita.</p>
-                    <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
+                    {{-- <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button> --}}
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                         Doloribus nemo porro quidem amet minus sit illo magnam eos, laudantium atque dolorem, ducimus
                         accusamus voluptatibus ipsum rerum ex fuga incidunt ea? Maxime!
                     </p>
-                    <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
+                    {{-- <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button> --}}
                 </div>
                 <div class="col-lg-6 order-first order-md-last wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-75" style="display:flex; align-items:center; justify-content:center;">
@@ -97,7 +97,7 @@
                         architecto accusantium temporibus eligendi repellat, aut harum dolore deleniti perspiciatis iste
                         aperiam unde sint quis porro eos error perferendis. Aliquam, molestiae libero! Autem esse quaerat
                         sed nisi sit earum soluta expedita.</p>
-                    <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
+                    {{-- <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button> --}}
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
                         Doloribus nemo porro quidem amet minus sit illo magnam eos, laudantium atque dolorem, ducimus
                         accusamus voluptatibus ipsum rerum ex fuga incidunt ea? Maxime!
                     </p>
-                    <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button>
+                    {{-- <button type="button" class="btn btn-primary" style="border-radius: 10px">See More</button> --}}
                     {{-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> --}}
                 </div>
                 <div class="col-lg-6 order-first order-md-last wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
