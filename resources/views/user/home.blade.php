@@ -5,36 +5,36 @@
     @include('partials.carousel')
 
 
-    @isset($announcements)
-        <div class="text-center">
-            <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1>
-        </div>
+    {{-- @isset($announcements) --}}
+        {{-- <div class="text-center"> --}}
+            {{-- <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1> --}}
+        {{-- </div> --}}
         {{-- Looping semua pengumuman --}}
-        @foreach ($announcements as $announcement)
+        {{-- @foreach ($announcements as $announcement) --}}
             {{-- Bagian pengumuman terdekat --}}
-            @if ($loop->first)
-                <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $announcement->title }}&rdquo;
-                            </h4>
-                            <p>{{ $announcement->body }}</p>
-                            <p>{{ $announcement->caption }}</p>
-                            <p>{{ $announcement->date }}</p>
-                        </div>
-                    </div>
-                </div>
+            {{-- @if ($loop->first) --}}
+                {{-- <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s"> --}}
+                    {{-- <div class="service-item text-center pt-3"> --}}
+                        {{-- <div class="p-4"> --}}
+                            {{-- <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $announcement->title }}&rdquo; --}}
+                            {{-- </h4> --}}
+                            {{-- <p>{{ $announcement->body }}</p> --}}
+                            {{-- <p>{{ $announcement->caption }}</p> --}}
+                            {{-- <p>{{ $announcement->date }}</p> --}}
+                        {{-- </div> --}}
+                    {{-- </div> --}}
+                {{-- </div> --}}
             {{-- Bagian pengumuman segera datang : 3 --}}
-            @else
-                <div class="text-center">
-                    <h4>&ldquo;{{ $announcement->title }}</h4>
-                    <p>{{ $announcement->body }}</p>
-                    <p>{{ $announcement->caption }}</p>
-                    <p>{{ $announcement->date }}</p>
-                </div>
-            @endif
-        @endforeach
-    @endisset
+            {{-- @else --}}
+                {{-- <div class="text-center"> --}}
+                    {{-- <h4>&ldquo;{{ $announcement->title }}</h4> --}}
+                    {{-- <p>{{ $announcement->body }}</p> --}}
+                    {{-- <p>{{ $announcement->caption }}</p> --}}
+                    {{-- <p>{{ $announcement->date }}</p> --}}
+                {{-- </div> --}}
+            {{-- @endif --}}
+        {{-- @endforeach --}}
+    {{-- @endisset --}}
 
     @include('partials.tentang')
 
@@ -106,6 +106,6 @@
     @include('partials.fasilitas')
     {{-- Fasilitas End --}}
 
-    @include('partials.artikel')
+    {{-- @include('partials.artikel') --}}
 
 @endsection

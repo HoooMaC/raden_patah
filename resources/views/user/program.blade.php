@@ -13,6 +13,9 @@
     </div>
 
     @foreach ($all_program as $programs)
+        @if($programs['category_title'] == 'Program Triwulan')
+            @continue
+        @endif
         @include('partials.program_per_category')
     @endforeach
 
