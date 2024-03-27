@@ -1,34 +1,35 @@
-<div class="container-fluid p-0 mb-5">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{ asset('img/MRP.png') }}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, .7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Selamat Datang di</h5>
-                            <h1 class="display-3 text-white animated slideInDown">Masjid Raden Patah Universitas
-                                Brawijaya</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="mrp-carousel">
+
+    <div class="mrp-slider">
+      <div class="mrp-slider__item active">
+        <img src="{{ asset('img/carousel/footage_mesjid_6.JPG') }}" class="mrp-slider__item-image active">
+        <div class="mrp-slider__item-desc">
+          <h5 class="mrp-slider__item-title">Selamat Datang di Masjid Raden Patah</h5>
+          <h6 class="mrp-slider__item-subtitle">Universitas Brawijaya</h6>
         </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{{ asset('img/2.png') }}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                style="background: rgba(24, 29, 56, .7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Selamat Datang di</h5>
-                            <h1 class="display-3 text-white animated slideInDown">Masjid Raden Patah Universitas
-                                Brawijaya</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+
+      <div class="mrp-slider__item">
+        <img src="{{ asset('img/carousel/footage_mesjid_10.png') }}" class="mrp-slider__item-image">
+        <div class="mrp-slider__item-desc">
+          <h5 class="mrp-slider__item-title">Selamat Datang di Masjid Raden Patah</h5>
+          <h6 class="mrp-slider__item-subtitle">Universitas Brawijaya</h6>
         </div>
+      </div>
+
+      <div class="mrp-slider__item">
+        <img src="{{ asset('img/carousel/footage_mesjid_7.JPG') }}" class="mrp-slider__item-image">
+        <div class="mrp-slider__item-desc">
+          <h5 class="mrp-slider__item-title">Selamat Datang di Masjid Raden Patah</h5>
+          <h6 class="mrp-slider__item-subtitle">Universitas Brawijaya</h6>
+        </div>
+      </div>
+
     </div>
-</div>
+
+    <div class="mrp-slider-container">
+      <span class="mrp-slider__next">&#10095;</span>
+      <span class="mrp-slider__prev">&#10094;</span>
+    </div>
+
+  </div>

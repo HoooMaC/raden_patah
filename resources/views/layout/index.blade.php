@@ -31,7 +31,8 @@
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/mrp-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-carousel-extended.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-carousel-extended.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-fasilitas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-program.css') }}">
@@ -71,6 +72,7 @@
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('js/mrp/mrp-navbar.js') }}"></script>
+    <script src="{{ asset('js/mrp/mrp-carousel.js') }}"></script>
 </body>
 
 </html>
