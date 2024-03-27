@@ -4,9 +4,7 @@
     top: 0;
     right: 0;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     height: 6rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -14,6 +12,12 @@
 
     background-color: white;
     z-index: 3;
+}
+
+.mrp-navbar > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mrp-navbar__logo h2{
