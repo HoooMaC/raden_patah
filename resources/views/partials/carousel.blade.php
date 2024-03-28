@@ -28,8 +28,8 @@
     </div>
 
     <div class="mrp-slider-container">
-      <span class="mrp-slider__next">&#10095;</span>
-      <span class="mrp-slider__prev">&#10094;</span>
+      <span class="mrp-slider__next"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="mrp-slider__prev"><i class="fa-solid fa-chevron-left"></i></span>
     </div>
 
   </div>
