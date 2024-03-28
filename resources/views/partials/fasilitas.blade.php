@@ -105,7 +105,7 @@
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/menara.JPG') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/menara.jpg') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Wisata Menara</h5>
                 <p class="mrp-fasilitas__desc">Difungsikan untuk Melihat View Kota Malang dari Menara MRP</p>
             </div>

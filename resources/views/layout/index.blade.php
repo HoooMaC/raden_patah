@@ -34,6 +34,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-carousel-extended.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-mobile-nav.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-fasilitas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/components/mrp-program.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mrp/mrp-utils.css') }}">
@@ -59,7 +60,7 @@
     @include('partials.footer')
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="z-index: 2"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
