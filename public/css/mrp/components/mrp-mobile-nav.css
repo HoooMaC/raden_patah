@@ -27,12 +27,12 @@
 
 .mrp-mobile-nav__link {
     position: relative;
-    font-weight: 300;
-
-    font-size: var(--size-xl);
+    font-weight: 600;
+    
+    font-size: var(--size-3xl);
     color: #696969;
     cursor: pointer;
-
+    
     transition: 0.4s;
 }
 

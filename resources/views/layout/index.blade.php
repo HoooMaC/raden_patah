@@ -72,7 +72,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/mrp/mrp-navbar.js') }}"></script>
+    <script src="{{ asset('js/mrp/mrp-mobile-navbar.js') }}"></script>
     <script src="{{ asset('js/mrp/mrp-carousel.js') }}"></script>
 </body>
 

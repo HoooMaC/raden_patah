@@ -25,19 +25,19 @@
     <ul class="mrp-mobile-nav__list">
         <li class="mrp-mobile-nav__item">
             <a href="{{ url('/') }}"
-                class="mrp-navbar__link {{ Request::path() === '/' ? 'active' : '' }}">Profil</a>
+                class="mrp-mobile-nav__link {{ Request::path() === '/' ? 'active' : '' }}">Profil</a>
         </li>
         <li class="mrp-mobile-nav__item">
             <a href="{{ url('/program') }}"
-                class="mrp-navbar__link {{ Request::path() === 'program' ? 'active' : '' }}">Program</a>
+                class="mrp-mobile-nav__link {{ Request::path() === 'program' ? 'active' : '' }}">Program</a>
         </li>
         <li class="mrp-mobile-nav__item">
             <a href="{{ url('/unit') }}"
-                class="mrp-navbar__link {{ Request::path() === 'unit' ? 'active' : '' }}">Unit</a>
+                class="mrp-mobile-nav__link {{ Request::path() === 'unit' ? 'active' : '' }}">Unit</a>
         </li>
         <li class="mrp-mobile-nav__item">
             <a href="{{ url('/layanan') }}"
-                class="mrp-navbar__link {{ Request::path() === 'layanan' ? 'active' : '' }}">Layanan</a>
+                class="mrp-mobile-nav__link {{ Request::path() === 'layanan' ? 'active' : '' }}">Layanan</a>
         </li>
     </ul>
 </div>
