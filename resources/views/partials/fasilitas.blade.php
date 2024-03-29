@@ -11,7 +11,7 @@
                 <p class="mrp-fasilitas__desc">Nasi dan Takjil Buka Puasa Bersama</p>
             </div>
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/mukena.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Perlengkapan Sholat</h5>
                 <p class="mrp-fasilitas__desc">Mukena, Qur'an, Sarung</p>
             </div>
@@ -21,13 +21,13 @@
                 <p class="mrp-fasilitas__desc">Kacamata Baca</p>
             </div>
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kotak_p3k.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Kotak P3K</h5>
                 <p class="mrp-fasilitas__desc">Persediaan Macam Obat</p>
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/etalase_barang_temuan.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Etalase Barang Temuan</h5>
                 <p class="mrp-fasilitas__desc">Tempat Etalase Barang Temuan</p>
             </div>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/charger_box.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Charger Box 24 Jam</h5>
                 <p class="mrp-fasilitas__desc">Tempat Untuk Charger</p>
             </div>
@@ -63,19 +63,19 @@
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/cctv.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Sistem Keamanan CCTV </h5>
                 <p class="mrp-fasilitas__desc">CCTV yang Dipantau oleh Pihak Takmir </p>
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/qris_mrp.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Kotak Infaq Digital (QRIS) </h5>
                 <p class="mrp-fasilitas__desc">Kotak Infaq Digital tersedia di beberapa sudut ruangan masjid </p>
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/yt_mrp.png') }}">
                 <h5 class="mrp-fasilitas__title mb-0">MRP Media </h5>
                 <p class="mrp-fasilitas__desc">MRP Media Youtube </p>
             </div>
@@ -87,13 +87,13 @@
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/ruang_vip.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Ruang Tamu VIP</h5>
                 <p class="mrp-fasilitas__desc">Ruang Tamu ini Difungsikan Untuk Menerima Tamu </p>
             </div>
 
             <div class="mrp-fasilitas__item testimonial-item text-center">
-                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/kacamata.png') }}">
+                <img class="mrp-fasilitas__image rounded-circle p-2 mx-auto mb-3" src="{{ asset('img/fasilitas/aula_basement.JPG') }}">
                 <h5 class="mrp-fasilitas__title mb-0">Aula Basement</h5>
                 <p class="mrp-fasilitas__desc">Difungsikan untuk kegiatan Kajian</p>
             </div>
