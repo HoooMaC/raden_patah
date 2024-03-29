@@ -28,15 +28,13 @@
 .mrp-mobile-nav__link {
     position: relative;
     font-weight: 600;
-    
+
     font-size: var(--size-3xl);
     color: #696969;
     cursor: pointer;
     
     transition: 0.4s;
 }
-
-/* .mrp-mobile-nav__link.active-link::after {} */
 
 .mrp-mobile-nav__link.active-link, 
 .mrp-mobile-nav__link:hover {
@@ -48,9 +46,7 @@
 /* sm */
 /* @media (min-width: 768px) {} */
 /* md */
-@media (min-width: 992px) {
-
-}
+/* @media (min-width: 992px) {} */
 /* lg */
 @media (min-width: 1200px) {
     .mrp-mobile-nav.active {
