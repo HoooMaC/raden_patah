@@ -1,7 +1,7 @@
 <div class="container-fluid pt-5 pb-3">
     <div class="container">
         <div class="text-center wow" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">PROGRAM DI MASJID RADEN PATAH</h6>
+            <h6 class="mrp-section-title bg-white text-center text-primary px-3">PROGRAM DI MASJID RADEN PATAH</h6>
             <h3 class="mb-5">{{ strtoupper($programs['category_title']) }}</h3>
         </div>
 
