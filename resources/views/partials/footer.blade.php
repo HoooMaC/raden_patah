@@ -4,11 +4,11 @@
             <div class="d-flex flex-wrap justify-content-center align-items-center">
                 <a class="btn btn-outline-light btn-social mx-1" href="https://wa.me/+628993117777"><i
                         class="fab fa-whatsapp"></i></a>
+                <p class="p-2 mt-3 text-white">0899 3117 777 </p>
             </div>
-            <p class="p-2 mt-3 text-white">0899 3117 777 </p>
-            <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/@MRPMedia"><i
-                    class="fab fa-youtube"></i></a>
             <div class="d-flex flex-wrap justify-content-center align-items-center">
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/@MRPMedia"><i
+                        class="fab fa-youtube"></i></a>
                 <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa-brands fa-line"></i></a>
                 <p class="p-2 mt-3 text-white">mrpmedia</p>
             </div>
