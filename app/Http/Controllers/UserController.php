@@ -25,6 +25,10 @@ class UserController extends Controller
         return view('Dashboard/admin');
     }
 
+    public function article(){
+        return view('article/default');
+    }
+
     public function program()  {
         $all_program = [];
 

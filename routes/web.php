@@ -27,6 +27,8 @@ Route::get('/event', [UserController::class, 'event']);
 Route::get('/unit', [UserController::class, 'unit']);
 Route::get('/layanan', [UserController::class, 'layanan'])->name('pages.layanan');
 
+Route::get('/article', [UserController::class, 'article']);
+
 // ?TEMPORARY inactive for now
 // Route::get('/pengumuman', [UserController::class, 'pengumuman'])->name('pages.pengumuman');
 

@@ -6,34 +6,34 @@
 
 
     {{-- @isset($announcements) --}}
-        {{-- <div class="text-center"> --}}
-            {{-- <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1> --}}
-        {{-- </div> --}}
-        {{-- Looping semua pengumuman --}}
-        {{-- @foreach ($announcements as $announcement) --}}
-            {{-- Bagian pengumuman terdekat --}}
-            {{-- @if ($loop->first) --}}
-                {{-- <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s"> --}}
-                    {{-- <div class="service-item text-center pt-3"> --}}
-                        {{-- <div class="p-4"> --}}
-                            {{-- <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $announcement->title }}&rdquo; --}}
-                            {{-- </h4> --}}
-                            {{-- <p>{{ $announcement->body }}</p> --}}
-                            {{-- <p>{{ $announcement->caption }}</p> --}}
-                            {{-- <p>{{ $announcement->date }}</p> --}}
-                        {{-- </div> --}}
-                    {{-- </div> --}}
-                {{-- </div> --}}
-            {{-- Bagian pengumuman segera datang : 3 --}}
-            {{-- @else --}}
-                {{-- <div class="text-center"> --}}
-                    {{-- <h4>&ldquo;{{ $announcement->title }}</h4> --}}
-                    {{-- <p>{{ $announcement->body }}</p> --}}
-                    {{-- <p>{{ $announcement->caption }}</p> --}}
-                    {{-- <p>{{ $announcement->date }}</p> --}}
-                {{-- </div> --}}
-            {{-- @endif --}}
-        {{-- @endforeach --}}
+    {{-- <div class="text-center"> --}}
+    {{-- <h1 class="section-title bg-white text-center text-primary px-3">PENGUMUMAN</h1> --}}
+    {{-- </div> --}}
+    {{-- Looping semua pengumuman --}}
+    {{-- @foreach ($announcements as $announcement) --}}
+    {{-- Bagian pengumuman terdekat --}}
+    {{-- @if ($loop->first) --}}
+    {{-- <div class="mt-5 col-lg-12 col-sm-12 wow fadeInUp" data-wow-delay="0.1s"> --}}
+    {{-- <div class="service-item text-center pt-3"> --}}
+    {{-- <div class="p-4"> --}}
+    {{-- <h4 class="section-title text-center text-primary px-3">&ldquo;{{ $announcement->title }}&rdquo; --}}
+    {{-- </h4> --}}
+    {{-- <p>{{ $announcement->body }}</p> --}}
+    {{-- <p>{{ $announcement->caption }}</p> --}}
+    {{-- <p>{{ $announcement->date }}</p> --}}
+    {{-- </div> --}}
+    {{-- </div> --}}
+    {{-- </div> --}}
+    {{-- Bagian pengumuman segera datang : 3 --}}
+    {{-- @else --}}
+    {{-- <div class="text-center"> --}}
+    {{-- <h4>&ldquo;{{ $announcement->title }}</h4> --}}
+    {{-- <p>{{ $announcement->body }}</p> --}}
+    {{-- <p>{{ $announcement->caption }}</p> --}}
+    {{-- <p>{{ $announcement->date }}</p> --}}
+    {{-- </div> --}}
+    {{-- @endif --}}
+    {{-- @endforeach --}}
     {{-- @endisset --}}
 
     @include('partials.tentang')
@@ -102,10 +102,37 @@
     </div>
 
 
+    {{--   Artikel Start --}}
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <h1 class="mrp-section-article-title bg-white text-center text-primary p-3">ARTIKEL</h1>
+
+                <div class="mrp-article-box mt-3">
+                    <img class="mrp-article-image" src={{ asset('img/footage_mesjid_8.JPG') }} alt="mesjid mrp">
+                    <div class="mrp-article-content">
+                        <div>
+                            <h2 class="mrp-article-content__title">Menelusuri Sejarah dan Kekuatan Simbolis Masjid Raden
+                                Patah</h2>
+                            <div class="mrp-article-content__body mt-2">Masjid telah menjadi bagian penting dari kehidupan
+                                masyarakat, tidak hanya sebagai tempat ibadah, tetapi juga sebagai ikon keagamaan dan
+                                kebudayaan, serta menjadi titik fokus dalam mengeksplorasi sejarah dan seni bangsa....</div>
+                        </div>
+                        <a href="/article" class="mrp-article-content__link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{--   Artikel End --}}
+
+
+
     {{-- Fasilitas Start --}}
     @include('partials.fasilitas')
     {{-- Fasilitas End --}}
 
     {{-- @include('partials.artikel') --}}
-
 @endsection
