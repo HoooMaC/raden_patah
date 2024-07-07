@@ -56,7 +56,7 @@ Route::resource('artikel', ArtikelController::class);
 
 // LOGIN & LOGOUT START
 
-Route::post('/login', 'Auth\login_Controller@login')->name('login')->middleware('auth');;
+// Route::post('/login', 'login_Controller@login')->name('login')->middleware('auth');;
 
 Route::get('/signin', [login_Controller::class, 'index']);
 Route::post('/signin/login', [login_Controller::class, 'login']);
