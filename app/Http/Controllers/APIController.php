@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\APILoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\FuncCall;
@@ -27,7 +28,58 @@ class APIController extends Controller
         return compact('all_user');
     }
 
-    public function post(Request $request)
+    public function login(Request $request)
+    {
+        // Mengambil email dari permintaan
+        $email = $request->input('email'); // atau $request->email
+        $password = $request->input('password'); // atau $request->email
+
+        // Memeriksa apakah email tidak terdefinisi
+        if (!$email) {
+            return response()->json([
+                'success' => false,
+                'message' => 'there is no email'
+            ], 200);
+        }
+        if (!$password) {
+            return response()->json([
+                'success' => false,
+                'message' => 'there is no password'
+            ], 200);
+        }
+
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:6'
+        ]);
+
+        // get the user by email from database
+        $user = User::where('email', $email)->first();
+
+        if ($user) {
+            // check the password
+            if (Hash::check($request->password, $user->password)) {
+                //if  the password are match then return response success is true
+                return response()->json([
+                    'success' => true,
+                    'user' => $user,
+                    'data' => ["message" => "Login Success"],
+                ], 200);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'data' => ["message" => "Error: Login failed. password mismatch"],
+                ], 200);
+            }
+        }
+
+        return response()->json([
+            'success' => false,
+            'data' => ["message" => "Error: Login failed. Please check your credentials and try again."],
+        ], 200);
+    }
+
+    public function register(Request $request)
     {
         Session::flash('name', $request->name);
         Session::flash('email', $request->email);
@@ -49,7 +101,8 @@ class APIController extends Controller
             'username' => $request->name,
             'role_id' => $request->role_id ?? 1, // Assuming role_id might be optional
             'email' => $request->email,
-            'password' => $request->password,
+            // need to hash here
+            'password' => Hash::make($request->password),
         ];
 
         Log::debug("Data to be created:", $data);
@@ -62,12 +115,13 @@ class APIController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => ["message" => "Success: You have made a new account with POST method."],
+                'password' => $data['password'],
             ], 200);
         }
 
         return response()->json([
             'success' => false,
-            'data' => ["message" => "Error: Login failed. Please check your credentials and try again."],
+            'data' => ["message" => "Error: Register failed. Please check your credentials and try again."],
         ], 401);
     }
 

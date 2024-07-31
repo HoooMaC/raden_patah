@@ -49,6 +49,9 @@
                         </form>
                         <h6 class="mb-4 text-center">- Or login with -</h6>
 
+                        <div class="form-group">
+                            <a href="{{ route('google-auth') }}" class="form-control btn btn-primary submit px-3">Google</a>
+                        </div>
                     </div>
                 </div>
             </div>

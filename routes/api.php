@@ -21,8 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/', [APIController::class, 'index']);
 Route::get('/users', [APIController::class, 'index']);
-Route::post('/users', [APIController::class, 'post']);
 Route::post('/test', [APIController::class, 'test']);
+Route::post('/register', [APIController::class, 'register']);
+Route::post('/login', [APIController::class, 'login']);
 
 Route::get('/user/{id}', [APIController::class, 'getUserById']);
 Route::get('/user/email/{email}', [APIController::class, 'getUserByEmail']);

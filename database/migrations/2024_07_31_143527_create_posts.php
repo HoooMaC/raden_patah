@@ -23,7 +23,8 @@ return new class extends Migration
                 $table->text('body');
                 $table->string('image');
                 $table->date('published_at');
-                $table->foreignId('user_id')->constrained('users');
+
+                $table->foreignId('writter_id')->references('id')->on('users')->onDelete('cascade');
                 $table->foreignId('category_id')->constrained('post_categories');
                 $table->timestamps();
             });

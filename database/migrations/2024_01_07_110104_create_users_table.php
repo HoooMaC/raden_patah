@@ -18,13 +18,15 @@ return new class extends Migration
             Schema::create('users', function (Blueprint $table) {
                 $table->id();
                 $table->string('name');
-                $table->string('username');
-                $table->string('email');
+                $table->string('username')->unique();
+                $table->string('email')->unique();
                 $table->string('password');
-                $table->string('phone_number')->nullable();
-                $table->string('gender')->nullable();
                 $table->date('birth_date')->nullable();
-                $table->foreignId('role_id')->constrained('roles')->default(2);
+                $table->integer('gender')->nullable();
+                $table->string('phone_number')->nullable();
+                $table->integer('role_id')->default(1);
+                $table->timestamp('email_verified_at')->nullable();
+                $table->string('image')->nullable();
                 $table->timestamps();
             });
         Schema::enableForeignKeyConstraints();

@@ -19,12 +19,6 @@ class login_Controller extends Controller
         return view('Login/login');
     }
 
-    public function index1()
-    {
-        return view('Login/register');
-    }
-
-
     public function login(Request $request)
     {
         Session::flash('email', $request->email);

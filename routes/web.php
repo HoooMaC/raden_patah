@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\login_Controller;
 use App\Http\Controllers\pengumuman_Controller;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\GoogleAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +62,9 @@ Route::resource('artikel', ArtikelController::class);
 Route::get('/signin', [login_Controller::class, 'index']);
 Route::post('/signin/login', [login_Controller::class, 'login']);
 Route::post('/signin/logout', [login_Controller::class, 'logout']);
+
+Route::get('auth/google',[GoogleAuthController::class, 'redirect'])->name('google-auth');
+Route::get('auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
 
 // REGISTER START
 
