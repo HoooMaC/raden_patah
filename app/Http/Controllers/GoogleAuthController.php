@@ -12,36 +12,47 @@ class GoogleAuthController extends Controller
 {
     public function redirect()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('google')->stateless()->redirect();
     }
 
     public function callbackGoogle()
     {
-        $google_user = Socialite::driver('google')->user();
+        try {
 
-        // check from account table
-        $account = Account::where('user_id', $google_user->getId())->first();
+            $google_user = Socialite::driver('google')->stateless()->user();
 
-        // if account exist, check user table. User row should exist
-        if ($account) {
-            $user = User::where('id', $account->user_id)->first();
-            if ($user) {
-                Auth::login($user);
-                return redirect()->intended('/');
+            // check from account table
+            $account = Account::where('provider_account_id', $google_user->getId())->first();
+
+            // if account exist, check user table. User row should exist
+            if ($account) {
+                $user = User::where('id', $account->user_account_id)->first();
+                // @dd($user);
+                if ($user) {
+                    Auth::login($user);
+                    return redirect()->intended('/');
+                }
             }
+
+            // if account doesn't exit then make new account
+            $new_user = User::create([
+                'name' => $google_user->getName(),
+                'email' => $google_user->getEmail(),
+                'username' => $google_user->getName(),
+            ]);
+            $new_account = Account::create([
+                'id' => $new_user->id,
+                'type' => 'google',
+                'provider' => 'google',
+                'provider_account_id' => $google_user->getID(),
+                'user_account_id' => $new_user->id,
+                // todo complete others
+            ]);
+
+            Auth::login($new_user);
+            return redirect()->intended('/');
+        } catch (\Throwable $th) {
+            throw $th;
         }
-
-        // if account doesn't exit then make new account
-        $new_user = User::create([
-            'name' => $google_user->getName(),
-            'email' => $google_user->getName(),
-        ]);
-        $new_account = Account::create([
-            'user_id' => $new_user->id,
-            // todo complete others
-        ]);
-
-        Auth::login($user);
-        return redirect()->intended('/');
     }
 }

@@ -22,7 +22,7 @@ class UserFactory extends Factory
             'username' => Str::slug(fake()->name(), '-'),
             'email' => fake()->unique()->safeEmail(),
             'password' => 'password', // password
-            'role_id' => 1 // password
+            'RoleID' => fake()->numberBetween(1,9) // password
         ];
     }
 

@@ -21,7 +21,7 @@ class AnnouncementFactory extends Factory
             'caption' => fake()->sentence(6, 20),
             'body' => fake()->paragraph(2,6),
             'date' => fake()->dateTime(),
-            'role_id' => fake()->numberBetween(2,6)
+            'RoleID' => fake()->numberBetween(2,6)
         ];
     }
 }

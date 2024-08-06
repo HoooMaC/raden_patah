@@ -10,11 +10,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="{{ asset('Login/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('LoginOld/css/style.css') }}">
 
 </head>
 
-<body class="img js-fullheight" style="background-image: url(Login/images/bg.jpg);">
+<body class="img js-fullheight" style="background-image: url(LoginOld/images/bg.jpg);">
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -25,7 +25,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <form action="/signin/login" method="POST">
+                        <form action="{{ route('login') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <input type="email" value="{{ Session::get('email') }}" name="email"
@@ -60,10 +60,10 @@
 
     {{-- JS SRTART --}}
 
-    <script src="{{ asset('Login/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('Login/js/popper.js') }}"></script>
-    <script src="{{ asset('Login/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('Login/js/main.js') }}"></script>
+    <script src="{{ asset('LoginOld/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('LoginOld/js/popper.js') }}"></script>
+    <script src="{{ asset('LoginOld/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('LoginOld/js/main.js') }}"></script>
 
     {{-- JS END --}}
 </body>

@@ -16,6 +16,20 @@
                 class="mrp-navbar__link {{ Request::path() === 'layanan' ? 'active' : '' }}">Layanan</a>
         </div>
 
+        {{-- Help me to check if user is logged in or not, if it is show logout button that send post request to /logout --}}
+        @auth
+            <a href="{{ route('logout') }}" class="mrp-navbar__link"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+            </a>
+            <p>{{ auth()->user()->name }}</p>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        @else
+            <p>Not Logged in</p>
+        @endauth
+
         <i class="mrp-navbar__bars  fa-solid fa-bars"></i>
     </div>
 </nav>

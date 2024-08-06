@@ -99,7 +99,7 @@ class APIController extends Controller
         $data = [
             'name' => $request->name,
             'username' => $request->name,
-            'role_id' => $request->role_id ?? 1, // Assuming role_id might be optional
+            'RoleID' => $request->RoleID ?? 1, // Assuming role_id might be optional
             'email' => $request->email,
             // need to hash here
             'password' => Hash::make($request->password),

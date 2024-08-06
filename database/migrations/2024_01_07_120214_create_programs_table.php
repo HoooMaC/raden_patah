@@ -22,7 +22,7 @@ return new class extends Migration
                 $table->string('time')->nullable();
                 $table->string('icon')->nullable();
                 $table->boolean('isActive')->default(true);
-                $table->foreignId('role_id')->constrained('roles');
+                $table->foreignId('RoleID')->references('RoleID')->on('roles')->onDelete('cascade');
                 $table->foreignId('program_category_id')->constrained('program_categories');
                 $table->timestamps();
             });

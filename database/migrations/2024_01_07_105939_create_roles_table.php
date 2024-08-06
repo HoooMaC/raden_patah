@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
         if (!Schema::hasTable('roles'))
             Schema::create('roles', function (Blueprint $table) {
-                $table->id();
+                $table->id('RoleID');
                 $table->string('name');
                 $table->timestamps();
             });

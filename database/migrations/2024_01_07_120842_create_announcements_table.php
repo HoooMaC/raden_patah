@@ -21,7 +21,7 @@ return new class extends Migration
                 $table->text('caption');
                 $table->text('body');
                 $table->date('date');
-                $table->foreignId('role_id')->constrained('roles');
+                $table->foreignId('RoleID')->references('RoleID')->on('roles')->onDelete('cascade');
                 $table->timestamps();
             });
         Schema::enableForeignKeyConstraints();

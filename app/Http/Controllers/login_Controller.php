@@ -21,6 +21,7 @@ class login_Controller extends Controller
 
     public function login(Request $request)
     {
+        // @dd('hello');
         Session::flash('email', $request->email);
         $request->validate([
             'email' => 'required',
@@ -37,9 +38,9 @@ class login_Controller extends Controller
         ];
 
         if (Auth::attempt($infologin)) {
-            return redirect('/Dataprogramharian')->with('success', Auth::user()->name . 'Berhasil login');
+            return redirect('/')->with('success', Auth::user()->name . 'Berhasil login');
         } else {
-            return redirect('signin')->withErrors('Username dan password yang dimasukkan tidak valid');
+            return redirect('/login')->withErrors('Username dan password yang dimasukkan tidak valid');
         }
     }
 
@@ -48,7 +49,7 @@ class login_Controller extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/signin')->with('success', 'Berhasil logout');
+        return redirect('/login')->with('success', 'Berhasil logout');
     }
 
 

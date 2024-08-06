@@ -22,7 +22,7 @@ class ProgramFactory extends Factory
             // 'time' => fake()->sentence(3, 10),
             'icon' => '',
             'isActive' => true,
-            'role_id' => 1,
+            'RoleID' => 1,
             'program_category_id' => fake()->numberBetween(1, 4)
         ];
     }

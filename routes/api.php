@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\APIController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\APIController;
+use App\Http\Controllers\PTQController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,13 @@ Route::post('/login', [APIController::class, 'login']);
 
 Route::get('/user/{id}', [APIController::class, 'getUserById']);
 Route::get('/user/email/{email}', [APIController::class, 'getUserByEmail']);
+
+
+// PTQ START
+Route::get('/ptq/Ziyaadah/AllRecords', [PTQController::class, 'GetAllZiyaadah']);
+Route::get('/ptq/Ziyaadah/AllReviewers', [PTQController::class, 'GetAllReviewer']);
+Route::get('/ptq/Ziyaadah/AllHafizs', [PTQController::class, 'GetAllHafiz']);
+
+Route::post('/ptq/new/ziyaadah', [PTQController::class, 'NewZiyaadah']);
+Route::post('/ptq/new/tilawah', [PTQController::class, 'NewTilawah']);
+Route::post('/ptq/new/murajaah', [PTQController::class, 'NewMurajaah']);

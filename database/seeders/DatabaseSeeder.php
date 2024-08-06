@@ -11,6 +11,7 @@ use App\Models\Announcement;
 use App\Models\PostCategory;
 use App\Models\ProgramCategory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Database\Seeders\ProgramIn2024Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
         Role::factory()->create(['name' => "dc" ]);
         Role::factory()->create(['name' => "imc" ]);
         Role::factory()->create(['name' => "mrplunchspace" ]);
+        Role::factory()->create(['name' => "reviewer" ]);
 
         ProgramCategory::factory()->create(['title' => 'Program Harian']);
         ProgramCategory::factory()->create(['title' => 'Program Mingguan']);
@@ -44,11 +46,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Gunawan',
             'username' => 'gunawan',
             'email' => 'gunawan@example.com',
-            'password' => 'password',
-            'role_id' => '2',
+            'password' => Hash::make('password'),
+            'RoleID' => '2',
         ]);
 
-        User::factory(10)->create();
+        User::factory(50)->create();
         Announcement::factory(10)->create();
         // Program::factory(50)->create();
         $this->call(

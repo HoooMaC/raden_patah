@@ -8,6 +8,7 @@ use App\Http\Controllers\login_Controller;
 use App\Http\Controllers\pengumuman_Controller;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\PTQController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,15 +60,17 @@ Route::resource('artikel', ArtikelController::class);
 
 // Route::post('/login', 'login_Controller@login')->name('login')->middleware('auth');;
 
-Route::get('/signin', [login_Controller::class, 'index']);
-Route::post('/signin/login', [login_Controller::class, 'login']);
-Route::post('/signin/logout', [login_Controller::class, 'logout']);
+Route::get('/login', [login_Controller::class, 'index']);
+Route::post('/login', [login_Controller::class, 'login'])->name('login');
+Route::post('/', [login_Controller::class, 'logout']);
+Route::post('/logout', [login_Controller::class, 'logout'])->name('logout');
 
 Route::get('auth/google',[GoogleAuthController::class, 'redirect'])->name('google-auth');
-Route::get('auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
+Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
 // REGISTER START
 
 Route::get('/register', [login_Controller::class, 'index1']);
 Route::post('/signin/register', [login_Controller::class, 'register']);
 Route::post('/signin/create', [login_Controller::class, 'create']);
+
