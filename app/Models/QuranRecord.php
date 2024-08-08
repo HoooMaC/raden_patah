@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TilawahRecord extends Model
+class QuranRecord extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'QuranRecordID';
+    
     protected $guarded = [
-        // 'id',
+        'id',
     ];
 }

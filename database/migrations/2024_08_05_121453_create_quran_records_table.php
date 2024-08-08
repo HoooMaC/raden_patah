@@ -13,18 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ziyaadah_records', function (Blueprint $table) {
-            $table->id('ZiyaadahID');
-            //TODO : CHECK HIS
-            $table->foreignId('UserID')->references('UserID')->on('users')->onDelete('cascade');
+        Schema::create('quran_records', function (Blueprint $table) {
+            $table->id('QuranRecordID');
+            $table->foreignId('HafizID')->references('UserID')->on('users')->onDelete('cascade');
             $table->foreignId('ReviewerID')->nullable()->references('UserID')->on('users')->onDelete('cascade');
+            $table->string('Category');
             $table->string('StartChapter');
             $table->string('EndChapter');
             $table->integer('StartVerse');
             $table->integer('EndVerse');
             $table->date('ZiyaadahDate');
             $table->text('Feedback')->nullable();
-            $table->string('Score')->nullable();
+            $table->string('Score');
+            $table->boolean('IsVerified')->default(false);
             $table->timestamps();
         });
     }
